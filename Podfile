@@ -37,5 +37,5 @@ target 'XRBFrame' do
     pod 'JXPagingView/Paging', '~> 2.1.0'
     pod 'JXSegmentedView', '~> 1.2.7'
     pod 'DanmakuKit', '~> 1.2.0'
-    pod 'XRBModule'
+    pod 'XRBModule/Module'
 end
