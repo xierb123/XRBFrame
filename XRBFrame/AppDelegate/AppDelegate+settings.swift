@@ -43,6 +43,10 @@ extension AppDelegate {
         if #available(iOS 11.0, *) {
             UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
         }
+        
+        if #available(iOS 15.0, *) {
+            UITableView.appearance().sectionHeaderTopPadding = 0
+        }
 
         // Disable estimates for UITableView
         let tableView = UITableView.appearance()

@@ -64,6 +64,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         setupView()
+        setupAppearance()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -114,6 +115,21 @@ class BaseViewController: UIViewController {
             if viewControllersCount > 1 {
                 navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backBtn)
             }
+        }
+    }
+    
+    /// 针对iOS15系统的适配
+    private func setupAppearance() {
+        if #available(iOS 15.0, *) { //UINavigationBarAppearance属性从iOS13开始
+            let navBarAppearance = UINavigationBarAppearance()
+            // 背景色
+            navBarAppearance.backgroundColor = Color.navigationItem
+            // 去掉半透明效果
+            navBarAppearance.backgroundEffect = nil
+            // 去除导航栏阴影（如果不设置clear，导航栏底下会有一条阴影线）
+            navBarAppearance.shadowColor = UIColor.clear
+            navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
         }
     }
 }
