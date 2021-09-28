@@ -190,6 +190,13 @@
 		D9676FD226C504DA00345890 /* UserListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9676FD126C504DA00345890 /* UserListEntity.swift */; };
 		D9676FD526C5100600345890 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9676FD426C5100600345890 /* UserListCell.swift */; };
 		D971815F26F57C930056354F /* EssayModularizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D971815E26F57C930056354F /* EssayModularizationViewController.swift */; };
+		D97CF65C2702A6500006D1A4 /* AnimationForPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF65B2702A6500006D1A4 /* AnimationForPresentViewController.swift */; };
+		D97CF6622702A7510006D1A4 /* CollectionViewDataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF65E2702A7510006D1A4 /* CollectionViewDataBinding.swift */; };
+		D97CF6632702A7510006D1A4 /* CollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF65F2702A7510006D1A4 /* CollectionViewProtocol.swift */; };
+		D97CF6642702A7510006D1A4 /* CollectionSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF6602702A7510006D1A4 /* CollectionSectionViewModel.swift */; };
+		D97CF6652702A7510006D1A4 /* CollectionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF6612702A7510006D1A4 /* CollectionCellViewModel.swift */; };
+		D97CF6692702A88B0006D1A4 /* RouterEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF6672702A88A0006D1A4 /* RouterEvent.swift */; };
+		D97CF66A2702A88B0006D1A4 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF6682702A88A0006D1A4 /* EventRouter.swift */; };
 		D991288226E6024700C8EB56 /* AppDelegate+settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D991288126E6024700C8EB56 /* AppDelegate+settings.swift */; };
 		D9993C7026D4E37B00773735 /* SubViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9993C6F26D4E37B00773735 /* SubViewCell.swift */; };
 		D9993C7526D4EE6A00773735 /* HomeSubListPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9993C7426D4EE6A00773735 /* HomeSubListPushManager.swift */; };
@@ -424,6 +431,13 @@
 		D9676FD126C504DA00345890 /* UserListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListEntity.swift; sourceTree = "<group>"; };
 		D9676FD426C5100600345890 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		D971815E26F57C930056354F /* EssayModularizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayModularizationViewController.swift; sourceTree = "<group>"; };
+		D97CF65B2702A6500006D1A4 /* AnimationForPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationForPresentViewController.swift; sourceTree = "<group>"; };
+		D97CF65E2702A7510006D1A4 /* CollectionViewDataBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataBinding.swift; sourceTree = "<group>"; };
+		D97CF65F2702A7510006D1A4 /* CollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocol.swift; sourceTree = "<group>"; };
+		D97CF6602702A7510006D1A4 /* CollectionSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionSectionViewModel.swift; sourceTree = "<group>"; };
+		D97CF6612702A7510006D1A4 /* CollectionCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellViewModel.swift; sourceTree = "<group>"; };
+		D97CF6672702A88A0006D1A4 /* RouterEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterEvent.swift; sourceTree = "<group>"; };
+		D97CF6682702A88A0006D1A4 /* EventRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
 		D991288126E6024700C8EB56 /* AppDelegate+settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+settings.swift"; sourceTree = "<group>"; };
 		D9993C6F26D4E37B00773735 /* SubViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewCell.swift; sourceTree = "<group>"; };
 		D9993C7426D4EE6A00773735 /* HomeSubListPushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSubListPushManager.swift; sourceTree = "<group>"; };
@@ -634,6 +648,7 @@
 				D9676EA026C4FA9500345890 /* Extensions */,
 				D9676EBF26C4FA9500345890 /* Map */,
 				D9676EC226C4FA9500345890 /* PropertyWrapper */,
+				D97CF65D2702A72B0006D1A4 /* CollectionExtension */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -875,6 +890,7 @@
 		D9676E7626C4FA9500345890 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D97CF6662702A88A0006D1A4 /* EventRouter */,
 				D9676E7726C4FA9500345890 /* Statistics */,
 				D9676E7A26C4FA9500345890 /* Crypto */,
 				D9676E7D26C4FA9500345890 /* ImageManager.swift */,
@@ -1096,6 +1112,7 @@
 				D9993C7226D4EE2700773735 /* Home */,
 				D9993C7126D4EE1900773735 /* Code */,
 				D99B151826DCE4BB00505067 /* Module */,
+				D97CF65A2702A5DE0006D1A4 /* Animation */,
 				D9666EE826EB467A006A583C /* AudioAndVideo */,
 				D9666EE926EB4EE6006A583C /* Essay */,
 			);
@@ -1454,6 +1471,34 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D97CF65A2702A5DE0006D1A4 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				D97CF65B2702A6500006D1A4 /* AnimationForPresentViewController.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		D97CF65D2702A72B0006D1A4 /* CollectionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D97CF6612702A7510006D1A4 /* CollectionCellViewModel.swift */,
+				D97CF6602702A7510006D1A4 /* CollectionSectionViewModel.swift */,
+				D97CF65E2702A7510006D1A4 /* CollectionViewDataBinding.swift */,
+				D97CF65F2702A7510006D1A4 /* CollectionViewProtocol.swift */,
+			);
+			path = CollectionExtension;
+			sourceTree = "<group>";
+		};
+		D97CF6662702A88A0006D1A4 /* EventRouter */ = {
+			isa = PBXGroup;
+			children = (
+				D97CF6672702A88A0006D1A4 /* RouterEvent.swift */,
+				D97CF6682702A88A0006D1A4 /* EventRouter.swift */,
+			);
+			path = EventRouter;
+			sourceTree = "<group>";
+		};
 		D9993C6E26D4E30E00773735 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1786,6 +1831,7 @@
 				D9C6AFC526CDFBAA002389E5 /* PageCollectionViewFlowLayout.swift in Sources */,
 				D9BE572B26D87B7400FF27DC /* CodePropertyViewController.swift in Sources */,
 				D9FEDCCA26D6207C00D8C626 /* PrintLog.swift in Sources */,
+				D97CF66A2702A88B0006D1A4 /* EventRouter.swift in Sources */,
 				D9676F7E26C4FA9500345890 /* ShareImageManager.swift in Sources */,
 				D9676F1C26C4FA9500345890 /* UIConfig.swift in Sources */,
 				D9676F7726C4FA9500345890 /* TokenRefreshManager.swift in Sources */,
@@ -1823,11 +1869,14 @@
 				D9676F7326C4FA9500345890 /* UDIDManager.swift in Sources */,
 				D9676F9326C4FA9500345890 /* UIWindowExtensions.swift in Sources */,
 				D9676F8C26C4FA9500345890 /* UIViewControllerExtensions.swift in Sources */,
+				D97CF6632702A7510006D1A4 /* CollectionViewProtocol.swift in Sources */,
 				D9676F2326C4FA9500345890 /* AppDelegate+rootWindow.swift in Sources */,
 				D95C99AB26D3A15C006828B5 /* SearchManager.swift in Sources */,
 				D9676F1D26C4FA9500345890 /* NotificationConfig.swift in Sources */,
 				D9676F2826C4FA9500345890 /* DatabaseTableName.swift in Sources */,
+				D97CF6622702A7510006D1A4 /* CollectionViewDataBinding.swift in Sources */,
 				D9676F7D26C4FA9500345890 /* ShareConfig.swift in Sources */,
+				D97CF6692702A88B0006D1A4 /* RouterEvent.swift in Sources */,
 				D905658D26D7332500933E57 /* CodeArrayViewController.swift in Sources */,
 				D9676F6926C4FA9500345890 /* AuthConfig.swift in Sources */,
 				D9676F9F26C4FA9500345890 /* MapExtensions.swift in Sources */,
@@ -1842,6 +1891,7 @@
 				D950A90426EF1AD400BF09EB /* KlotskiImageView.swift in Sources */,
 				D971815F26F57C930056354F /* EssayModularizationViewController.swift in Sources */,
 				D9676F2426C4FA9500345890 /* AppDelegate.swift in Sources */,
+				D97CF65C2702A6500006D1A4 /* AnimationForPresentViewController.swift in Sources */,
 				D9676FB526C4FA9500345890 /* MainManager.swift in Sources */,
 				D9676F7226C4FA9500345890 /* TiercelManager.swift in Sources */,
 				D9676FB626C4FA9500345890 /* MainViewController.swift in Sources */,
@@ -1873,6 +1923,7 @@
 				D9676F9D26C4FA9500345890 /* UIDatePickerExtensions.swift in Sources */,
 				D95C99A126D37D7D006828B5 /* SearchHeaderView.swift in Sources */,
 				D9676F3326C4FA9500345890 /* BaseViewController.swift in Sources */,
+				D97CF6642702A7510006D1A4 /* CollectionSectionViewModel.swift in Sources */,
 				D9676F7B26C4FA9500345890 /* TencentOpenManager.swift in Sources */,
 				D9676FA526C4FA9500345890 /* HomeViewController.swift in Sources */,
 				D9676F6426C4FA9500345890 /* StatisticsAPI.swift in Sources */,
@@ -1905,6 +1956,7 @@
 				D9676FBC26C4FA9500345890 /* LiveTabBarItemContentView.swift in Sources */,
 				D9676F5926C4FA9500345890 /* WMAddressPicker.swift in Sources */,
 				D9676F8826C4FA9500345890 /* DictionaryExtensions.swift in Sources */,
+				D97CF6652702A7510006D1A4 /* CollectionCellViewModel.swift in Sources */,
 				D9676F9226C4FA9500345890 /* IntExtensions.swift in Sources */,
 				D9FEDCCE26D6479100D8C626 /* CodeOptionalViewController.swift in Sources */,
 				D9676FB826C4FA9500345890 /* PersonalTabBarItemContentView.swift in Sources */,
