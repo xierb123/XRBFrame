@@ -50,14 +50,15 @@ struct HomeSubListPushManager {
     
     static var animation: [String] {
         return [
-            "赵六"
+            "Present转场动画"
         ]
     }
     
     static var essay: [String] {
         return [
             "华容道",
-            "组件化"
+            "组件化",
+            "爱宠collectionView列表绑定"
         ]
     }
     
@@ -164,7 +165,18 @@ struct HomeSubListPushManager {
         targetVC?.pushVC(vc)
     }
     static func pushAnimationSubVC(with indexPath: IndexPath) {
-        
+        var vc: BaseViewController!
+        switch (indexPath.section, indexPath.row) {
+        case(0, 0):
+            vc = AnimationForPresentViewController()
+        default:
+            return
+        }
+        vc.view.backgroundColor = .white
+        vc.title = animation[indexPath.row]
+        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
+        targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        targetVC?.pushVC(vc)
     }
     static func pushEssaySubVC(with indexPath: IndexPath) {
         var vc: BaseViewController!
@@ -173,6 +185,8 @@ struct HomeSubListPushManager {
             vc = EssayKlotskiViewController()
         case(0, 1):
             vc = EssayModularizationViewController()
+        case(0, 2):
+            vc = EssayCollectionViewController()
         default:
             return
         }
