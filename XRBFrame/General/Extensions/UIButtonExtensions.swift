@@ -95,39 +95,6 @@ extension UIButton {
 
 extension UIButton {
     
-    func setHidden(_ isHidden: Bool) {
-        self.isHidden = isHidden
-        if isHidden {
-            //setEnlargeEdgeWith(top: nil, right: nil, bottom: nil, left: nil)
-        } else {
-            //setEnlargeEdgeWith(top: 10, right: 10, bottom: 10, left: 10)
-        }
-    }
-    
-    
-    
-    /// 加大按钮响应范围
-    /*func setEnlargeEdgeWith(top:CGFloat?,right:CGFloat?,bottom:CGFloat?,left:CGFloat?)
-    {
-        if self.isHidden { return } else {
-        objc_setAssociatedObject(self, &rectNameKey.0, top, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        objc_setAssociatedObject(self, &rectNameKey.1, right, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        objc_setAssociatedObject(self, &rectNameKey.2, bottom, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        objc_setAssociatedObject(self, &rectNameKey.3, left, .OBJC_ASSOCIATION_COPY_NONATOMIC)
-        }
-    }*/
-    
-    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        
-        if let topEdge = objc_getAssociatedObject(self, &rectNameKey.0) as? CGFloat,
-           let rightEdge = objc_getAssociatedObject(self, &rectNameKey.1) as? CGFloat,
-           let bottomEdge = objc_getAssociatedObject(self, &rectNameKey.2) as? CGFloat,
-           let leftEdge = objc_getAssociatedObject(self, &rectNameKey.3) as? CGFloat
-        {
-            return CGRect(x: bounds.origin.x - leftEdge, y: bounds.origin.y - topEdge, width: bounds.width + leftEdge + rightEdge, height: bounds.height + topEdge + bottomEdge).contains(point) ? self : nil
-        }
-        return super.hitTest(point, with: event)
-    }
     
     private struct AssociatedKey {
         static var largeEdge: CGFloat = 0

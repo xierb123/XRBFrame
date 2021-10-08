@@ -49,7 +49,6 @@ class UserListCell: UITableViewCell {
         indexButton.backgroundColor = UIColor.orange
         indexButton.setCornerRadius(8)
         indexButton.addTarget(self, action: #selector(btnAction), for: UIControl.Event.touchUpInside)
-        indexButton.setHidden(false)
         self.contentView.addSubview(indexButton)
         indexButton.snp.makeConstraints { (make) in
             // 自动布局

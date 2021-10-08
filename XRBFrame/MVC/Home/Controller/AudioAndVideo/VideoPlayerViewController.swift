@@ -63,7 +63,17 @@ class VideoPlayerViewController: BaseViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         button.backgroundColor = UIColor.orange
         button.addTarget(self, action: #selector(customButtonAction), for: UIControl.Event.touchUpInside)
-        button.largeEdge = 10
+        return button
+    }()
+    
+    private lazy var testButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("测试响应事件", for: UIControl.State.normal)
+        button.setTitleColor(.white, for: UIControl.State.normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        button.backgroundColor = UIColor.orange
+        button.addTarget(self, action: #selector(testButtonAction), for: UIControl.Event.touchUpInside)
+        button.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(testTapGestureAction)))
         return button
     }()
     
@@ -101,6 +111,7 @@ class VideoPlayerViewController: BaseViewController {
         setupPlayerView()
         setupRepeatButton()
         setupCustomButton()
+        setupTestButton()
     }
     
     private func setupPlayerView() {
@@ -122,6 +133,16 @@ class VideoPlayerViewController: BaseViewController {
         customButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(repeatButton.snp.bottom).offset(60)
+            make.width.equalTo(120)
+            make.height.equalTo(30)
+        }
+    }
+    
+    private func setupTestButton() {
+        self.view.addSubview(testButton)
+        testButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(customButton.snp.bottom).offset(60)
             make.width.equalTo(120)
             make.height.equalTo(30)
         }
@@ -151,9 +172,18 @@ extension VideoPlayerViewController {
         }
         self.firstClick = Date()
     }
+    
+    @objc func testButtonAction() {
+        printLog("按钮点击事件")
+    }
+    
+    @objc func testTapGestureAction() {
+        printLog("手势响应事件")
+    }
 }
 
 //MARK: - 数据请求
 extension VideoPlayerViewController {
+    
     
 }

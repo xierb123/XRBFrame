@@ -60,7 +60,6 @@ class HomeCustomNavigationBar: UIView {
         scanButton = UIButton()
         scanButton.setImage(UIImage(named: "ic_navigation_scan"), for: UIControl.State.normal)
         scanButton.addTarget(self, action: #selector(scanBtnAction), for: UIControl.Event.touchUpInside)
-        scanButton.setHidden(false)
         self.addSubview(scanButton)
         scanButton.snp.makeConstraints { (make) in
             // 自动布局

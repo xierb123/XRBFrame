@@ -4,7 +4,7 @@
 //
 //  Created by 谢汝滨 on 2021/9/28.
 //
-//  <#名称#>cell
+//  单条cell(单条数据里面包含数组展示)cell
 
 import UIKit
 

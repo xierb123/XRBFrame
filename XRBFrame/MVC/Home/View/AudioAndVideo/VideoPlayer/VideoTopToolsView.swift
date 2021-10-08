@@ -25,7 +25,7 @@ class VideoTopToolsView: UIView {
                 //gradualLayer.frame.size.width = Constant.screenWidth
                 sideMargin = Constant.margin
             }
-            fullScreenButton.setHidden(isFullScreen)
+            fullScreenButton.isHidden = isFullScreen
             
             layoutIfNeeded()
         }
@@ -84,7 +84,6 @@ class VideoTopToolsView: UIView {
         backButton = UIButton()
         backButton.setImage(UIImage(named: "ic_navigation_back"), for: UIControl.State.normal)
         backButton.addTarget(self, action: #selector(backBtnAction), for: UIControl.Event.touchUpInside)
-        backButton.setHidden(false)
         self.addSubview(backButton)
     }
     
@@ -92,7 +91,6 @@ class VideoTopToolsView: UIView {
         fullScreenButton = UIButton()
         fullScreenButton.setImage(UIImage(named: "ic_screen_landscape"), for: UIControl.State.normal)
         fullScreenButton.addTarget(self, action: #selector(fullScreenBtnAction), for: UIControl.Event.touchUpInside)
-        fullScreenButton.setHidden(false)
         //fullScreenButton.largeEdge = 20.0
         self.addSubview(fullScreenButton)
         

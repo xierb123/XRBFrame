@@ -31,7 +31,9 @@ struct HomeSubListPushManager {
             "泛型",
             "协议扩展",
             "内存分配",
-            "Equatable&Comparable"
+            "Equatable&Comparable",
+            "UserDefaults扩展"
+            
         ]
     }
     
@@ -125,6 +127,8 @@ struct HomeSubListPushManager {
             vc = CodeARCViewController()
         case(0, 18):
             vc = CodeEquatable_ComparableViewController()
+        case(0, 19):
+            vc = CodeUserDefaultsViewController()
         default:
             return
         }
