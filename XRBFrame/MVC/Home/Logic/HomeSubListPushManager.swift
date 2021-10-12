@@ -56,6 +56,16 @@ struct HomeSubListPushManager {
         ]
     }
     
+    static var designMode: [String] {
+        return [
+            "责任链模式",
+            "策略模式",
+            "命令模式",
+            "中介者模式",
+            "模式综合测试页面",
+        ]
+    }
+    
     static var essay: [String] {
         return [
             "华容道",
@@ -80,6 +90,9 @@ struct HomeSubListPushManager {
         case .animation:
             // 动画效果
             pushAnimationSubVC(with: indexPath)
+        case .designMode:
+            // 设计模式
+            pushDesignModeSubVC(with: indexPath)
         case .essay:
             // 随笔
             pushEssaySubVC(with: indexPath)
@@ -178,6 +191,28 @@ struct HomeSubListPushManager {
         }
         vc.view.backgroundColor = .white
         vc.title = animation[indexPath.row]
+        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
+        targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
+        targetVC?.pushVC(vc)
+    }
+    static func pushDesignModeSubVC(with indexPath: IndexPath) {
+        var vc: BaseViewController!
+        switch (indexPath.section, indexPath.row) {
+        case(0, 0):
+            vc = DesignModeChainOfResponsibilityPatternViewController()
+        case(0, 1):
+            vc = DesignModeStrategyViewController()
+        case(0, 2):
+            vc = DesignModeCommandViewController()
+        case(0, 3):
+            vc = DesignModeMediatorViewController()
+        case(0, 4):
+            vc = DesignModeDemoViewController()
+        default:
+            return
+        }
+        vc.view.backgroundColor = .white
+        vc.title = designMode[indexPath.row]
         vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
         targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
         targetVC?.pushVC(vc)

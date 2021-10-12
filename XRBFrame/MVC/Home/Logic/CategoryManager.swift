@@ -21,7 +21,7 @@ struct CategoryManager {
     
     static func  selectedCategories() -> [CategoryEntity] {
         var itemArray = [CategoryEntity]()
-        let selectedArr = ["推荐","代码学习","组件封装","音视频","动画效果","随笔"]
+        let selectedArr = ["推荐","代码学习","组件封装","音视频","动画效果","设计模式","随笔"]
         for item in selectedArr{
             let entity = CategoryEntity(classifyKey: item, name: item, parentKey: "1111")
             itemArray.append(entity)

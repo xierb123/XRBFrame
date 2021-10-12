@@ -14,6 +14,7 @@ enum Category {
     case module
     case audioAndVideo
     case animation
+    case designMode
     case essay
 }
 
@@ -36,6 +37,8 @@ class HomSubViewController: BaseViewController {
             return HomeSubListPushManager.audioAndVideo
         case .animation:
             return HomeSubListPushManager.animation
+        case .designMode:
+            return HomeSubListPushManager.designMode
         case .essay:
             return HomeSubListPushManager.essay
         case .none:

@@ -145,6 +145,8 @@ class HomeViewController: BaseViewController {
                 subVC = HomSubViewController(parameters: ["type" : Category.audioAndVideo])
             case "动画效果":
                 subVC = HomSubViewController(parameters: ["type" : Category.animation])
+            case "设计模式":
+                subVC = HomSubViewController(parameters: ["type": Category.designMode])
             case "随笔":
                 subVC = HomSubViewController(parameters: ["type" : Category.essay])
             default:

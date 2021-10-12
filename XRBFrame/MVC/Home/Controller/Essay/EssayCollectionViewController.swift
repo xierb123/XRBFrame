@@ -129,7 +129,12 @@ extension EssayCollectionViewController {
             BannerEntity(title: "测试数据2", imageName: "ic_address_empty"),
             BannerEntity(title: "测试数据3", imageName: "ic_address_empty"),
             BannerEntity(title: "测试数据4", imageName: "ic_address_empty"),
-            BannerEntity(title: "测试数据5", imageName: "ic_address_empty")
+            BannerEntity(title: "测试数据5", imageName: "ic_address_empty"),
+            BannerEntity(title: "测试数据6", imageName: "ic_address_empty"),
+            BannerEntity(title: "测试数据7", imageName: "ic_address_empty"),
+            BannerEntity(title: "测试数据8", imageName: "ic_address_empty"),
+            BannerEntity(title: "测试数据9", imageName: "ic_address_empty"),
+            BannerEntity(title: "测试数据10", imageName: "ic_address_empty")
         ]
         
         var viewModel = CollectionSectionViewModel(type: ManyItemCell.identifier)
