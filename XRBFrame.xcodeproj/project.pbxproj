@@ -33,6 +33,8 @@
 		D95C99A726D39679006828B5 /* SearchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C99A626D39679006828B5 /* SearchEntity.swift */; };
 		D95C99A926D39D4A006828B5 /* SearchSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C99A826D39D4A006828B5 /* SearchSectionHeaderView.swift */; };
 		D95C99AB26D3A15C006828B5 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C99AA26D3A15C006828B5 /* SearchManager.swift */; };
+		D95EF5D227181741004D22E8 /* HKRouterMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EF5D027181741004D22E8 /* HKRouterMap.swift */; };
+		D95EF5D327181742004D22E8 /* HKRouterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EF5D127181741004D22E8 /* HKRouterConfig.swift */; };
 		D9666EEB26EB50D9006A583C /* EssayKlotskiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9666EEA26EB50D9006A583C /* EssayKlotskiViewController.swift */; };
 		D9676E0426C4F4FB00345890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9676E0326C4F4FB00345890 /* Assets.xcassets */; };
 		D9676E0726C4F4FB00345890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9676E0526C4F4FB00345890 /* LaunchScreen.storyboard */; };
@@ -246,6 +248,9 @@
 		D9C6AFC526CDFBAA002389E5 /* PageCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6AFBD26CDFBAA002389E5 /* PageCollectionViewFlowLayout.swift */; };
 		D9C6AFC626CDFBAA002389E5 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6AFBE26CDFBAA002389E5 /* PageView.swift */; };
 		D9C6AFC926CE306A002389E5 /* HomeCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C6AFC826CE306A002389E5 /* HomeCategoryViewController.swift */; };
+		D9DC6A9927182AA600AF150D /* PageRoute.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9DC6A9827182AA600AF150D /* PageRoute.plist */; };
+		D9DC6A9B27182B2D00AF150D /* EssayRouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DC6A9A27182B2D00AF150D /* EssayRouterViewController.swift */; };
+		D9DC6A9D27182FAE00AF150D /* EssayRouterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DC6A9C27182FAE00AF150D /* EssayRouterDetailViewController.swift */; };
 		D9E2F75326C6134500B8AE7D /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2F75226C6134500B8AE7D /* WorkViewController.swift */; };
 		D9E2F75526C668F100B8AE7D /* UserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2F75426C668F100B8AE7D /* UserMenuView.swift */; };
 		D9E8DB7626E8B3810045858B /* ModuleMutableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E8DB7526E8B3810045858B /* ModuleMutableTableViewController.swift */; };
@@ -287,6 +292,8 @@
 		D95C99A626D39679006828B5 /* SearchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEntity.swift; sourceTree = "<group>"; };
 		D95C99A826D39D4A006828B5 /* SearchSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionHeaderView.swift; sourceTree = "<group>"; };
 		D95C99AA26D3A15C006828B5 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
+		D95EF5D027181741004D22E8 /* HKRouterMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKRouterMap.swift; sourceTree = "<group>"; };
+		D95EF5D127181741004D22E8 /* HKRouterConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKRouterConfig.swift; sourceTree = "<group>"; };
 		D9666EEA26EB50D9006A583C /* EssayKlotskiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayKlotskiViewController.swift; sourceTree = "<group>"; };
 		D9676DF726C4F4FA00345890 /* XRBFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XRBFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9676E0326C4F4FB00345890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -505,6 +512,9 @@
 		D9C6AFBD26CDFBAA002389E5 /* PageCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		D9C6AFBE26CDFBAA002389E5 /* PageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		D9C6AFC826CE306A002389E5 /* HomeCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryViewController.swift; sourceTree = "<group>"; };
+		D9DC6A9827182AA600AF150D /* PageRoute.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PageRoute.plist; sourceTree = "<group>"; };
+		D9DC6A9A27182B2D00AF150D /* EssayRouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayRouterViewController.swift; sourceTree = "<group>"; };
+		D9DC6A9C27182FAE00AF150D /* EssayRouterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayRouterDetailViewController.swift; sourceTree = "<group>"; };
 		D9E2F75226C6134500B8AE7D /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
 		D9E2F75426C668F100B8AE7D /* UserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuView.swift; sourceTree = "<group>"; };
 		D9E8DB7526E8B3810045858B /* ModuleMutableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleMutableTableViewController.swift; sourceTree = "<group>"; };
@@ -606,6 +616,15 @@
 			path = SearchView;
 			sourceTree = "<group>";
 		};
+		D95EF5CF2718154C004D22E8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D95EF5D127181741004D22E8 /* HKRouterConfig.swift */,
+				D95EF5D027181741004D22E8 /* HKRouterMap.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		D9666EE726EB4645006A583C /* AudioAndVideo */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,6 +647,8 @@
 				D9666EEA26EB50D9006A583C /* EssayKlotskiViewController.swift */,
 				D971815E26F57C930056354F /* EssayModularizationViewController.swift */,
 				D92910C727030444006EC84D /* EssayCollectionViewController.swift */,
+				D9DC6A9A27182B2D00AF150D /* EssayRouterViewController.swift */,
+				D9DC6A9C27182FAE00AF150D /* EssayRouterDetailViewController.swift */,
 			);
 			path = Essay;
 			sourceTree = "<group>";
@@ -669,6 +690,7 @@
 				D9676E0526C4F4FB00345890 /* LaunchScreen.storyboard */,
 				D9676E0826C4F4FB00345890 /* Info.plist */,
 				D9676E1026C4F87400345890 /* Header.h */,
+				D9DC6A9827182AA600AF150D /* PageRoute.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -701,6 +723,7 @@
 		D9676E1D26C4FA9500345890 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				D95EF5CF2718154C004D22E8 /* Router */,
 				D9676E1E26C4FA9500345890 /* DataSource */,
 				D9676E2226C4FA9500345890 /* Database */,
 				D9676E2626C4FA9500345890 /* Response */,
@@ -1789,6 +1812,7 @@
 			files = (
 				D9676F5D26C4FA9500345890 /* address_selected@3x.png in Resources */,
 				D9676F5C26C4FA9500345890 /* address_selected@2x.png in Resources */,
+				D9DC6A9927182AA600AF150D /* PageRoute.plist in Resources */,
 				D9676E0726C4F4FB00345890 /* LaunchScreen.storyboard in Resources */,
 				D9676F5826C4FA9500345890 /* WMAddressPicker.xib in Resources */,
 				D9676F6026C4FA9500345890 /* WMAddressCell.xib in Resources */,
@@ -1909,6 +1933,7 @@
 				D9676F6526C4FA9500345890 /* StatisticsManager.swift in Sources */,
 				D9676F8626C4FA9500345890 /* UICollectionViewExtensions.swift in Sources */,
 				D9676FB326C4FA9500345890 /* LiveViewController.swift in Sources */,
+				D95EF5D327181742004D22E8 /* HKRouterConfig.swift in Sources */,
 				D9676F2C26C4FA9500345890 /* DefaultResponse.swift in Sources */,
 				D9676FBF26C4FA9500345890 /* IntegralMallTabBarItemContentView.swift in Sources */,
 				D9676F7926C4FA9500345890 /* CookieManager.swift in Sources */,
@@ -1919,6 +1944,7 @@
 				D9676F4E26C4FA9500345890 /* AlertAction.swift in Sources */,
 				D9676F8E26C4FA9500345890 /* UINavigationControllerExtensions.swift in Sources */,
 				D9458BE626CF4A980085F3AA /* CategoryView.swift in Sources */,
+				D9DC6A9D27182FAE00AF150D /* EssayRouterDetailViewController.swift in Sources */,
 				D9676F5726C4FA9500345890 /* UIView+GSAlert.swift in Sources */,
 				D9676F6E26C4FA9500345890 /* DanmakuTextCell.swift in Sources */,
 				D9E2F75326C6134500B8AE7D /* WorkViewController.swift in Sources */,
@@ -1926,12 +1952,14 @@
 				D9676F8326C4FA9500345890 /* UITableViewExtensions.swift in Sources */,
 				D99D62732710446C00B765D6 /* UserDefaultsManager.swift in Sources */,
 				D9E2F75526C668F100B8AE7D /* UserMenuView.swift in Sources */,
+				D9DC6A9B27182B2D00AF150D /* EssayRouterViewController.swift in Sources */,
 				D9676F7126CCFDB200EBCDE0 /* HomSubViewController.swift in Sources */,
 				D991288226E6024700C8EB56 /* AppDelegate+settings.swift in Sources */,
 				D9676F3126C4FA9500345890 /* NetworkReachabilityMonitor.swift in Sources */,
 				D9BE572D26D891A700FF27DC /* CodeInitViewController.swift in Sources */,
 				D9C6AFC026CDFBAA002389E5 /* PageHelper.swift in Sources */,
 				D9676FA826C4FA9500345890 /* UserAPI.swift in Sources */,
+				D95EF5D227181741004D22E8 /* HKRouterMap.swift in Sources */,
 				D9676F2D26C4FA9500345890 /* RequestParameterManager.swift in Sources */,
 				D9676F1F26C4FA9500345890 /* UserState.swift in Sources */,
 				D9676FC326C4FA9500345890 /* LoginViewController.swift in Sources */,

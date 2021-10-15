@@ -70,7 +70,8 @@ struct HomeSubListPushManager {
         return [
             "华容道",
             "组件化",
-            "爱宠collectionView列表绑定"
+            "爱宠collectionView列表绑定",
+            "页面路由"
         ]
     }
     
@@ -226,6 +227,8 @@ struct HomeSubListPushManager {
             vc = EssayModularizationViewController()
         case(0, 2):
             vc = EssayCollectionViewController()
+        case(0, 3):
+            vc = EssayRouterViewController()
         default:
             return
         }

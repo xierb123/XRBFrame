@@ -38,5 +38,6 @@ target 'XRBFrame' do
     pod 'JXSegmentedView', '~> 1.2.7'
     pod 'DanmakuKit', '~> 1.2.0'
     pod 'FSPagerView'
+    pod 'URLNavigator'
     pod 'XRBModule/Module'
 end

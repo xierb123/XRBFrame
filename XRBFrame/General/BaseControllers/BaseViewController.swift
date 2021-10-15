@@ -13,7 +13,7 @@ protocol NavigateBackProtocol {
     func navigateToBack()
 }
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, RouterController {
     var parameters: [String: Any]?
     var isNavigationBarHidden: Bool = false
 
@@ -26,6 +26,10 @@ class BaseViewController: UIViewController {
         backBtn.addTarget(self, action: #selector(clickBackBtn), for: .touchUpInside)
         return backBtn
     }()
+    
+    func initRouterParams(params: Dictionary<String, String>) {
+        
+    }
     
     override var prefersStatusBarHidden: Bool {
         return false

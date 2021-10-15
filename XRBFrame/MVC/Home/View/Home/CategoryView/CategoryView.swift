@@ -146,7 +146,7 @@ extension CategoryView {
 
 //MARK: - 选择器事件(自定义方法)
 extension CategoryView {
-    /// 更新数据
+    /// 更新数据, 采用了任务组保证线程操作完成后执行跳转操作
     func updateCategories(successHandle: (() -> ())? = nil) {
         let group = DispatchGroup()
         group.enter()

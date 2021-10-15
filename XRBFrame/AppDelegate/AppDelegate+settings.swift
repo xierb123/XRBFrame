@@ -13,12 +13,19 @@ extension AppDelegate {
     func defaultSettings(with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         // 注册第三方开放平台
         registerOpenPlatform()
+        //注册router
+        setupRouter()
         // 网络监听
         NetworkReachabilityMonitor.startMonitoring()
         // 设置IQKeyboardManager
         setupIQKeyboardManager()
         // 启动Bugly
         Bugly.start(withAppId: BuglyConfig.appId)
+    }
+    
+    func setupRouter() {
+        HKRouterConfig.routerSchemesName = "petTarger"
+        HKRouterMap.initializeRouter(navigator: HKRouter.routerShared)
     }
             
     func setupAppearance() {
