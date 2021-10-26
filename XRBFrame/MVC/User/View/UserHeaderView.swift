@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class UserHeaderView: UIView {
     //MARK: - 全局变量
     private var backdroundImageView: UIImageView!
@@ -31,7 +30,7 @@ class UserHeaderView: UIView {
         backdroundImageView.backgroundColor = .green
         backdroundImageView.image = UIImage(named: "bg_dengluye")
         backdroundImageView.contentMode = .scaleAspectFill
-        backdroundImageView.layer.masksToBounds = true
+        backdroundImageView.clipsToBounds = true
         backdroundImageView.frame = CGRect(x: 0, y: 0, width: Constant.screenWidth, height: 300)
         self.addSubview(backdroundImageView)
     }

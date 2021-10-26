@@ -71,7 +71,8 @@ struct HomeSubListPushManager {
             "华容道",
             "组件化",
             "爱宠collectionView列表绑定",
-            "页面路由"
+            "页面路由",
+            "卡片样式展示"
         ]
     }
     
@@ -229,6 +230,8 @@ struct HomeSubListPushManager {
             vc = EssayCollectionViewController()
         case(0, 3):
             vc = EssayRouterViewController()
+        case(0, 4):
+            vc = EssayCardViewController()
         default:
             return
         }
