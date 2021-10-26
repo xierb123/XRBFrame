@@ -70,8 +70,8 @@ class MainViewController: ESTabBarController {
 
     private func tabBarSettings() {
         let containerSize = CGSize(width: Constant.screenWidth, height: 27.0)
-        let shadowImage = UIImage(named: "ic_tabbar_shadow_irregularity")?.stretchLeftAndRight(containerSize: containerSize)
-//        let shadowImage = UIImage(named: "ic_tabbar_shadow")
+        //let shadowImage = UIImage(named: "ic_tabbar_shadow_irregularity")?.stretchLeftAndRight(containerSize: containerSize)
+        let shadowImage = UIImage(named: "ic_tabbar_shadow")
         let backgroundImage = UIImage()
 
         if #available(iOS 13.0, *) {

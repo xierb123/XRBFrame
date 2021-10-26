@@ -17,6 +17,13 @@ class TabBarItemBaseContentView: ESTabBarItemContentView {
         highlightTextColor = Color.theme
         titleLabel.font = UIFont.systemFont(ofSize: 11.0)
         
+        //FIXME: - 修改icon的布局
+        imageView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(Constant.margin/2)
+            make.width.height.equalTo(48)
+        }
+        
         titleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(32)
             make.centerX.equalToSuperview()
