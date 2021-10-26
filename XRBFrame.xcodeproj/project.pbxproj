@@ -20,6 +20,10 @@
 		D92910CD27030C22006EC84D /* SingleItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92910CC27030C22006EC84D /* SingleItemCell.swift */; };
 		D92910CF27030C31006EC84D /* ManyItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92910CE27030C31006EC84D /* ManyItemCell.swift */; };
 		D92910D227030F9C006EC84D /* BannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92910D127030F9C006EC84D /* BannerEntity.swift */; };
+		D942E3DC272261C00066EC97 /* EssayCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942E3DB272261C00066EC97 /* EssayCardViewController.swift */; };
+		D942E3DE272284BE0066EC97 /* EssayCardListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942E3DD272284BE0066EC97 /* EssayCardListViewController.swift */; };
+		D942E3E0272295120066EC97 /* EssayCardListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942E3DF272295120066EC97 /* EssayCardListCell.swift */; };
+		D942E3E22722B26F0066EC97 /* EssayCardListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D942E3E12722B26F0066EC97 /* EssayCardListSectionHeaderView.swift */; };
 		D9458BE626CF4A980085F3AA /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9458BE526CF4A980085F3AA /* CategoryView.swift */; };
 		D9458BE926CF4DD20085F3AA /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9458BE826CF4DD20085F3AA /* CategoryViewCell.swift */; };
 		D9458BEB26CF513A0085F3AA /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9458BEA26CF513A0085F3AA /* CategoryHeaderView.swift */; };
@@ -279,6 +283,10 @@
 		D92910CC27030C22006EC84D /* SingleItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemCell.swift; sourceTree = "<group>"; };
 		D92910CE27030C31006EC84D /* ManyItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManyItemCell.swift; sourceTree = "<group>"; };
 		D92910D127030F9C006EC84D /* BannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerEntity.swift; sourceTree = "<group>"; };
+		D942E3DB272261C00066EC97 /* EssayCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayCardViewController.swift; sourceTree = "<group>"; };
+		D942E3DD272284BE0066EC97 /* EssayCardListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayCardListViewController.swift; sourceTree = "<group>"; };
+		D942E3DF272295120066EC97 /* EssayCardListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayCardListCell.swift; sourceTree = "<group>"; };
+		D942E3E12722B26F0066EC97 /* EssayCardListSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayCardListSectionHeaderView.swift; sourceTree = "<group>"; };
 		D9458BE526CF4A980085F3AA /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		D9458BE826CF4DD20085F3AA /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		D9458BEA26CF513A0085F3AA /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
@@ -600,6 +608,8 @@
 			children = (
 				D92910C927030913006EC84D /* collectionView */,
 				D950A90326EF1AD400BF09EB /* KlotskiImageView.swift */,
+				D942E3DF272295120066EC97 /* EssayCardListCell.swift */,
+				D942E3E12722B26F0066EC97 /* EssayCardListSectionHeaderView.swift */,
 			);
 			path = Essay;
 			sourceTree = "<group>";
@@ -649,6 +659,8 @@
 				D92910C727030444006EC84D /* EssayCollectionViewController.swift */,
 				D9DC6A9A27182B2D00AF150D /* EssayRouterViewController.swift */,
 				D9DC6A9C27182FAE00AF150D /* EssayRouterDetailViewController.swift */,
+				D942E3DB272261C00066EC97 /* EssayCardViewController.swift */,
+				D942E3DD272284BE0066EC97 /* EssayCardListViewController.swift */,
 			);
 			path = Essay;
 			sourceTree = "<group>";
@@ -1888,6 +1900,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D942E3DE272284BE0066EC97 /* EssayCardListViewController.swift in Sources */,
 				D9676FD526C5100600345890 /* UserListCell.swift in Sources */,
 				D9676F4026C4FA9500345890 /* CustomLayer.swift in Sources */,
 				D9676F6A26C4FA9500345890 /* AuthManager.swift in Sources */,
@@ -1936,6 +1949,7 @@
 				D95EF5D327181742004D22E8 /* HKRouterConfig.swift in Sources */,
 				D9676F2C26C4FA9500345890 /* DefaultResponse.swift in Sources */,
 				D9676FBF26C4FA9500345890 /* IntegralMallTabBarItemContentView.swift in Sources */,
+				D942E3E22722B26F0066EC97 /* EssayCardListSectionHeaderView.swift in Sources */,
 				D9676F7926C4FA9500345890 /* CookieManager.swift in Sources */,
 				D9676F8A26C4FA9500345890 /* StringExtensions.swift in Sources */,
 				D9676F2026C4FA9500345890 /* EmptyDataConfig.swift in Sources */,
@@ -2072,6 +2086,7 @@
 				D99E281D27103E2900C106E0 /* CodeUserDefaultsViewController.swift in Sources */,
 				D905659326D7685900933E57 /* CodeFunctionViewController.swift in Sources */,
 				D9676F9D26C4FA9500345890 /* UIDatePickerExtensions.swift in Sources */,
+				D942E3E0272295120066EC97 /* EssayCardListCell.swift in Sources */,
 				D95C99A126D37D7D006828B5 /* SearchHeaderView.swift in Sources */,
 				D9676F3326C4FA9500345890 /* BaseViewController.swift in Sources */,
 				D97CF6642702A7510006D1A4 /* CollectionSectionViewModel.swift in Sources */,
@@ -2125,6 +2140,7 @@
 				D9676F9626C4FA9500345890 /* UIButtonExtensions.swift in Sources */,
 				D9676F7126C4FA9500345890 /* AppGrayManager.swift in Sources */,
 				D9676F9826C4FA9500345890 /* UIImageViewExtensions.swift in Sources */,
+				D942E3DC272261C00066EC97 /* EssayCardViewController.swift in Sources */,
 				D99554222713D35A0039902B /* DesignModeCommandViewController.swift in Sources */,
 				D9676FBE26C4FA9500345890 /* TabBarItemBaseContentView.swift in Sources */,
 				D9676F4726C4FA9500345890 /* CustomTextField.swift in Sources */,
