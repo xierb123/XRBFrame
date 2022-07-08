@@ -14,6 +14,9 @@
 		D905659526D7747F00933E57 /* CodeBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D905659426D7747F00933E57 /* CodeBlockViewController.swift */; };
 		D905659726D7882100933E57 /* CodeEnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D905659626D7882100933E57 /* CodeEnumViewController.swift */; };
 		D905659926D7941800933E57 /* CodeStructAndClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D905659826D7941800933E57 /* CodeStructAndClassViewController.swift */; };
+		D90B1F53286E893E001F6EAE /* CodeFunctionalProgrammingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90B1F52286E893E001F6EAE /* CodeFunctionalProgrammingViewController.swift */; };
+		D90C742027EAFB14005AC7A6 /* FloatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C741F27EAFB14005AC7A6 /* FloatView.swift */; };
+		D90C742227EAFBAF005AC7A6 /* ModuleFloatViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90C742127EAFBAF005AC7A6 /* ModuleFloatViewViewController.swift */; };
 		D91C92F327059384005FC61C /* AnimationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91C92F227059384005FC61C /* AnimationListViewController.swift */; };
 		D92910C827030444006EC84D /* EssayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92910C727030444006EC84D /* EssayCollectionViewController.swift */; };
 		D92910CB27030C0F006EC84D /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92910CA27030C0F006EC84D /* BannerCell.swift */; };
@@ -28,7 +31,9 @@
 		D9458BE926CF4DD20085F3AA /* CategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9458BE826CF4DD20085F3AA /* CategoryViewCell.swift */; };
 		D9458BEB26CF513A0085F3AA /* CategoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9458BEA26CF513A0085F3AA /* CategoryHeaderView.swift */; };
 		D950A90426EF1AD400BF09EB /* KlotskiImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950A90326EF1AD400BF09EB /* KlotskiImageView.swift */; };
+		D950D30227280A29001A68AD /* EssayBezierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950D30127280A29001A68AD /* EssayBezierViewController.swift */; };
 		D957E3F426E99BD00046BE7F /* MutableTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D957E3F326E99BD00046BE7F /* MutableTableCell.swift */; };
+		D95A297128261F5100563D41 /* AnimationSideSlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95A297028261F5100563D41 /* AnimationSideSlipViewController.swift */; };
 		D95C999C26D34119006828B5 /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C999B26D34119006828B5 /* HomeSearchViewController.swift */; };
 		D95C999F26D3446B006828B5 /* SearchCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C999E26D3446B006828B5 /* SearchCustomNavigationBar.swift */; };
 		D95C99A126D37D7D006828B5 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95C99A026D37D7D006828B5 /* SearchHeaderView.swift */; };
@@ -202,6 +207,7 @@
 		D9676FD226C504DA00345890 /* UserListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9676FD126C504DA00345890 /* UserListEntity.swift */; };
 		D9676FD526C5100600345890 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9676FD426C5100600345890 /* UserListCell.swift */; };
 		D971815F26F57C930056354F /* EssayModularizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D971815E26F57C930056354F /* EssayModularizationViewController.swift */; };
+		D973BBC927D7393700740506 /* CodeMeatdataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D973BBC827D7393700740506 /* CodeMeatdataViewController.swift */; };
 		D97CF65C2702A6500006D1A4 /* AnimationForPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF65B2702A6500006D1A4 /* AnimationForPresentViewController.swift */; };
 		D97CF6622702A7510006D1A4 /* CollectionViewDataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF65E2702A7510006D1A4 /* CollectionViewDataBinding.swift */; };
 		D97CF6632702A7510006D1A4 /* CollectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF65F2702A7510006D1A4 /* CollectionViewProtocol.swift */; };
@@ -211,6 +217,8 @@
 		D97CF66A2702A88B0006D1A4 /* EventRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF6682702A88A0006D1A4 /* EventRouter.swift */; };
 		D97CF66E2702E41F0006D1A4 /* AnimationForPresentListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF66D2702E41F0006D1A4 /* AnimationForPresentListCell.swift */; };
 		D97CF6712702EADE0006D1A4 /* AnimationForPresentListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97CF6702702EADE0006D1A4 /* AnimationForPresentListEntity.swift */; };
+		D97E8F7028406FA800070103 /* ModuleWKWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97E8F6F28406FA800070103 /* ModuleWKWebViewViewController.swift */; };
+		D984CE852728DE1A00161738 /* BezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D984CE842728DE1A00161738 /* BezierView.swift */; };
 		D991288226E6024700C8EB56 /* AppDelegate+settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D991288126E6024700C8EB56 /* AppDelegate+settings.swift */; };
 		D99554222713D35A0039902B /* DesignModeCommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99554212713D35A0039902B /* DesignModeCommandViewController.swift */; };
 		D9955426271412400039902B /* DesignModeMediatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9955425271412400039902B /* DesignModeMediatorViewController.swift */; };
@@ -221,6 +229,7 @@
 		D99B151526DCBB9700505067 /* CodeARCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B151426DCBB9700505067 /* CodeARCViewController.swift */; };
 		D99B151726DCD98C00505067 /* CodeEquatable&ComparableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B151626DCD98C00505067 /* CodeEquatable&ComparableViewController.swift */; };
 		D99B151A26DCE53200505067 /* ModuleVerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B151926DCE53200505067 /* ModuleVerificationCodeViewController.swift */; };
+		D99C95F027ED5F12002D4D32 /* CircleMoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99C95EF27ED5F12002D4D32 /* CircleMoveView.swift */; };
 		D99D62732710446C00B765D6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99D62722710446C00B765D6 /* UserDefaultsManager.swift */; };
 		D99E281B2710331D00C106E0 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E281A2710331D00C106E0 /* UserDefaultsExtension.swift */; };
 		D99E281D27103E2900C106E0 /* CodeUserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E281C27103E2900C106E0 /* CodeUserDefaultsViewController.swift */; };
@@ -235,6 +244,8 @@
 		D9B2A4D426E0B1DF00380F38 /* VideoTopToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B2A4D326E0B1DF00380F38 /* VideoTopToolsView.swift */; };
 		D9B2A4D626E0B1F700380F38 /* VideoMiddleCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B2A4D526E0B1F700380F38 /* VideoMiddleCoverView.swift */; };
 		D9B2A4D826E0B20E00380F38 /* VideoBottomToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B2A4D726E0B20E00380F38 /* VideoBottomToolsView.swift */; };
+		D9B9D6C5286AD0F100B7CE6E /* CodeKVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9D6C4286AD0F100B7CE6E /* CodeKVOViewController.swift */; };
+		D9B9D6C7286B058000B7CE6E /* CodeGCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B9D6C6286B058000B7CE6E /* CodeGCDViewController.swift */; };
 		D9BE572B26D87B7400FF27DC /* CodePropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE572A26D87B7400FF27DC /* CodePropertyViewController.swift */; };
 		D9BE572D26D891A700FF27DC /* CodeInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE572C26D891A700FF27DC /* CodeInitViewController.swift */; };
 		D9BE572F26D8BC5400FF27DC /* CodeProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE572E26D8BC5400FF27DC /* CodeProtocolViewController.swift */; };
@@ -255,10 +266,18 @@
 		D9DC6A9927182AA600AF150D /* PageRoute.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9DC6A9827182AA600AF150D /* PageRoute.plist */; };
 		D9DC6A9B27182B2D00AF150D /* EssayRouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DC6A9A27182B2D00AF150D /* EssayRouterViewController.swift */; };
 		D9DC6A9D27182FAE00AF150D /* EssayRouterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DC6A9C27182FAE00AF150D /* EssayRouterDetailViewController.swift */; };
+		D9DEFEAE2733A936002A1C9E /* BannerPagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DEFEAD2733A936002A1C9E /* BannerPagerCell.swift */; };
 		D9E2F75326C6134500B8AE7D /* WorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2F75226C6134500B8AE7D /* WorkViewController.swift */; };
 		D9E2F75526C668F100B8AE7D /* UserMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2F75426C668F100B8AE7D /* UserMenuView.swift */; };
 		D9E8DB7626E8B3810045858B /* ModuleMutableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E8DB7526E8B3810045858B /* ModuleMutableTableViewController.swift */; };
 		D9F9634B27152E9400ADE7A9 /* DesignModeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F9634A27152E9400ADE7A9 /* DesignModeDemoViewController.swift */; };
+		D9FB5A5F281696F40049600E /* EssayExpressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FB5A5E281696F40049600E /* EssayExpressViewController.swift */; };
+		D9FEAC3827E4657A005F5AD4 /* ModuleLabelWithOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEAC3727E4657A005F5AD4 /* ModuleLabelWithOpenViewController.swift */; };
+		D9FEAC3A27E4659B005F5AD4 /* CustomLabelWithOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEAC3927E4659B005F5AD4 /* CustomLabelWithOpen.swift */; };
+		D9FEC0BF2742575800867CFA /* EssayFloatingPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEC0BE2742575800867CFA /* EssayFloatingPanelViewController.swift */; };
+		D9FEC0C1274258C800867CFA /* DebugTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEC0C0274258C800867CFA /* DebugTableViewController.swift */; };
+		D9FEC0C327425AA900867CFA /* InspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEC0C227425AA800867CFA /* InspectorViewController.swift */; };
+		D9FEC0C527425DAA00867CFA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEC0C427425DAA00867CFA /* Extensions.swift */; };
 		D9FEDCC826D5DB0D00D8C626 /* CodeSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEDCC726D5DB0D00D8C626 /* CodeSwitchViewController.swift */; };
 		D9FEDCCA26D6207C00D8C626 /* PrintLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEDCC926D6207C00D8C626 /* PrintLog.swift */; };
 		D9FEDCCC26D6302600D8C626 /* CodeLoopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FEDCCB26D6302600D8C626 /* CodeLoopViewController.swift */; };
@@ -277,6 +296,9 @@
 		D905659426D7747F00933E57 /* CodeBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlockViewController.swift; sourceTree = "<group>"; };
 		D905659626D7882100933E57 /* CodeEnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEnumViewController.swift; sourceTree = "<group>"; };
 		D905659826D7941800933E57 /* CodeStructAndClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeStructAndClassViewController.swift; sourceTree = "<group>"; };
+		D90B1F52286E893E001F6EAE /* CodeFunctionalProgrammingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFunctionalProgrammingViewController.swift; sourceTree = "<group>"; };
+		D90C741F27EAFB14005AC7A6 /* FloatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatView.swift; sourceTree = "<group>"; };
+		D90C742127EAFBAF005AC7A6 /* ModuleFloatViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFloatViewViewController.swift; sourceTree = "<group>"; };
 		D91C92F227059384005FC61C /* AnimationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationListViewController.swift; sourceTree = "<group>"; };
 		D92910C727030444006EC84D /* EssayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayCollectionViewController.swift; sourceTree = "<group>"; };
 		D92910CA27030C0F006EC84D /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
@@ -291,7 +313,9 @@
 		D9458BE826CF4DD20085F3AA /* CategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCell.swift; sourceTree = "<group>"; };
 		D9458BEA26CF513A0085F3AA /* CategoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHeaderView.swift; sourceTree = "<group>"; };
 		D950A90326EF1AD400BF09EB /* KlotskiImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KlotskiImageView.swift; sourceTree = "<group>"; };
+		D950D30127280A29001A68AD /* EssayBezierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayBezierViewController.swift; sourceTree = "<group>"; };
 		D957E3F326E99BD00046BE7F /* MutableTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableTableCell.swift; sourceTree = "<group>"; };
+		D95A297028261F5100563D41 /* AnimationSideSlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationSideSlipViewController.swift; sourceTree = "<group>"; };
 		D95C999B26D34119006828B5 /* HomeSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
 		D95C999E26D3446B006828B5 /* SearchCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCustomNavigationBar.swift; sourceTree = "<group>"; };
 		D95C99A026D37D7D006828B5 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
@@ -470,6 +494,7 @@
 		D9676FD126C504DA00345890 /* UserListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListEntity.swift; sourceTree = "<group>"; };
 		D9676FD426C5100600345890 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		D971815E26F57C930056354F /* EssayModularizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayModularizationViewController.swift; sourceTree = "<group>"; };
+		D973BBC827D7393700740506 /* CodeMeatdataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeMeatdataViewController.swift; sourceTree = "<group>"; };
 		D97CF65B2702A6500006D1A4 /* AnimationForPresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationForPresentViewController.swift; sourceTree = "<group>"; };
 		D97CF65E2702A7510006D1A4 /* CollectionViewDataBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataBinding.swift; sourceTree = "<group>"; };
 		D97CF65F2702A7510006D1A4 /* CollectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewProtocol.swift; sourceTree = "<group>"; };
@@ -479,6 +504,8 @@
 		D97CF6682702A88A0006D1A4 /* EventRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRouter.swift; sourceTree = "<group>"; };
 		D97CF66D2702E41F0006D1A4 /* AnimationForPresentListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationForPresentListCell.swift; sourceTree = "<group>"; };
 		D97CF6702702EADE0006D1A4 /* AnimationForPresentListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationForPresentListEntity.swift; sourceTree = "<group>"; };
+		D97E8F6F28406FA800070103 /* ModuleWKWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleWKWebViewViewController.swift; sourceTree = "<group>"; };
+		D984CE842728DE1A00161738 /* BezierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierView.swift; sourceTree = "<group>"; };
 		D991288126E6024700C8EB56 /* AppDelegate+settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+settings.swift"; sourceTree = "<group>"; };
 		D99554212713D35A0039902B /* DesignModeCommandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModeCommandViewController.swift; sourceTree = "<group>"; };
 		D9955425271412400039902B /* DesignModeMediatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModeMediatorViewController.swift; sourceTree = "<group>"; };
@@ -489,6 +516,7 @@
 		D99B151426DCBB9700505067 /* CodeARCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeARCViewController.swift; sourceTree = "<group>"; };
 		D99B151626DCD98C00505067 /* CodeEquatable&ComparableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodeEquatable&ComparableViewController.swift"; sourceTree = "<group>"; };
 		D99B151926DCE53200505067 /* ModuleVerificationCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleVerificationCodeViewController.swift; sourceTree = "<group>"; };
+		D99C95EF27ED5F12002D4D32 /* CircleMoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMoveView.swift; sourceTree = "<group>"; };
 		D99D62722710446C00B765D6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D99E281A2710331D00C106E0 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D99E281C27103E2900C106E0 /* CodeUserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeUserDefaultsViewController.swift; sourceTree = "<group>"; };
@@ -503,6 +531,8 @@
 		D9B2A4D326E0B1DF00380F38 /* VideoTopToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTopToolsView.swift; sourceTree = "<group>"; };
 		D9B2A4D526E0B1F700380F38 /* VideoMiddleCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoMiddleCoverView.swift; sourceTree = "<group>"; };
 		D9B2A4D726E0B20E00380F38 /* VideoBottomToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoBottomToolsView.swift; sourceTree = "<group>"; };
+		D9B9D6C4286AD0F100B7CE6E /* CodeKVOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeKVOViewController.swift; sourceTree = "<group>"; };
+		D9B9D6C6286B058000B7CE6E /* CodeGCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGCDViewController.swift; sourceTree = "<group>"; };
 		D9BE572A26D87B7400FF27DC /* CodePropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePropertyViewController.swift; sourceTree = "<group>"; };
 		D9BE572C26D891A700FF27DC /* CodeInitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeInitViewController.swift; sourceTree = "<group>"; };
 		D9BE572E26D8BC5400FF27DC /* CodeProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeProtocolViewController.swift; sourceTree = "<group>"; };
@@ -523,10 +553,18 @@
 		D9DC6A9827182AA600AF150D /* PageRoute.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PageRoute.plist; sourceTree = "<group>"; };
 		D9DC6A9A27182B2D00AF150D /* EssayRouterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayRouterViewController.swift; sourceTree = "<group>"; };
 		D9DC6A9C27182FAE00AF150D /* EssayRouterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayRouterDetailViewController.swift; sourceTree = "<group>"; };
+		D9DEFEAD2733A936002A1C9E /* BannerPagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerPagerCell.swift; sourceTree = "<group>"; };
 		D9E2F75226C6134500B8AE7D /* WorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewController.swift; sourceTree = "<group>"; };
 		D9E2F75426C668F100B8AE7D /* UserMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuView.swift; sourceTree = "<group>"; };
 		D9E8DB7526E8B3810045858B /* ModuleMutableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleMutableTableViewController.swift; sourceTree = "<group>"; };
 		D9F9634A27152E9400ADE7A9 /* DesignModeDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignModeDemoViewController.swift; sourceTree = "<group>"; };
+		D9FB5A5E281696F40049600E /* EssayExpressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayExpressViewController.swift; sourceTree = "<group>"; };
+		D9FEAC3727E4657A005F5AD4 /* ModuleLabelWithOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleLabelWithOpenViewController.swift; sourceTree = "<group>"; };
+		D9FEAC3927E4659B005F5AD4 /* CustomLabelWithOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelWithOpen.swift; sourceTree = "<group>"; };
+		D9FEC0BE2742575800867CFA /* EssayFloatingPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayFloatingPanelViewController.swift; sourceTree = "<group>"; };
+		D9FEC0C0274258C800867CFA /* DebugTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTableViewController.swift; sourceTree = "<group>"; };
+		D9FEC0C227425AA800867CFA /* InspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectorViewController.swift; sourceTree = "<group>"; };
+		D9FEC0C427425DAA00867CFA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D9FEDCC726D5DB0D00D8C626 /* CodeSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSwitchViewController.swift; sourceTree = "<group>"; };
 		D9FEDCC926D6207C00D8C626 /* PrintLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintLog.swift; sourceTree = "<group>"; };
 		D9FEDCCB26D6302600D8C626 /* CodeLoopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLoopViewController.swift; sourceTree = "<group>"; };
@@ -573,16 +611,17 @@
 			path = TransitionAnim;
 			sourceTree = "<group>";
 		};
-		D92910C927030913006EC84D /* collectionView */ = {
+		D92910C927030913006EC84D /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				D92910CA27030C0F006EC84D /* BannerCell.swift */,
+				D9DEFEAD2733A936002A1C9E /* BannerPagerCell.swift */,
 				D92910CC27030C22006EC84D /* SingleItemCell.swift */,
 				D92910CE27030C31006EC84D /* ManyItemCell.swift */,
 				D9AC50EB270436FC00FBCBB2 /* SingleHeaderView.swift */,
 				D9C668FD2704495F00C75CB4 /* SingleFooterView.swift */,
 			);
-			path = collectionView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		D92910D027030F85006EC84D /* Essay */ = {
@@ -606,12 +645,21 @@
 		D950A90226EF1AA000BF09EB /* Essay */ = {
 			isa = PBXGroup;
 			children = (
-				D92910C927030913006EC84D /* collectionView */,
+				D950D30327280AF9001A68AD /* Bezier */,
+				D92910C927030913006EC84D /* CollectionView */,
 				D950A90326EF1AD400BF09EB /* KlotskiImageView.swift */,
 				D942E3DF272295120066EC97 /* EssayCardListCell.swift */,
 				D942E3E12722B26F0066EC97 /* EssayCardListSectionHeaderView.swift */,
 			);
 			path = Essay;
+			sourceTree = "<group>";
+		};
+		D950D30327280AF9001A68AD /* Bezier */ = {
+			isa = PBXGroup;
+			children = (
+				D984CE842728DE1A00161738 /* BezierView.swift */,
+			);
+			path = Bezier;
 			sourceTree = "<group>";
 		};
 		D95C999D26D34435006828B5 /* SearchView */ = {
@@ -654,6 +702,7 @@
 		D9666EE926EB4EE6006A583C /* Essay */ = {
 			isa = PBXGroup;
 			children = (
+				D9FEC0C227425AA800867CFA /* InspectorViewController.swift */,
 				D9666EEA26EB50D9006A583C /* EssayKlotskiViewController.swift */,
 				D971815E26F57C930056354F /* EssayModularizationViewController.swift */,
 				D92910C727030444006EC84D /* EssayCollectionViewController.swift */,
@@ -661,6 +710,10 @@
 				D9DC6A9C27182FAE00AF150D /* EssayRouterDetailViewController.swift */,
 				D942E3DB272261C00066EC97 /* EssayCardViewController.swift */,
 				D942E3DD272284BE0066EC97 /* EssayCardListViewController.swift */,
+				D950D30127280A29001A68AD /* EssayBezierViewController.swift */,
+				D9FEC0BE2742575800867CFA /* EssayFloatingPanelViewController.swift */,
+				D9FEC0C0274258C800867CFA /* DebugTableViewController.swift */,
+				D9FB5A5E281696F40049600E /* EssayExpressViewController.swift */,
 			);
 			path = Essay;
 			sourceTree = "<group>";
@@ -1116,6 +1169,7 @@
 		D9676EA026C4FA9500345890 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D9FEC0C427425DAA00867CFA /* Extensions.swift */,
 				D9676EA126C4FA9500345890 /* CGRectExtensions.swift */,
 				D9676EA226C4FA9500345890 /* CGFloatExtensions.swift */,
 				D9676EA326C4FA9500345890 /* UITableViewExtensions.swift */,
@@ -1583,6 +1637,7 @@
 			children = (
 				D97CF65B2702A6500006D1A4 /* AnimationForPresentViewController.swift */,
 				D91C92F227059384005FC61C /* AnimationListViewController.swift */,
+				D95A297028261F5100563D41 /* AnimationSideSlipViewController.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1662,6 +1717,10 @@
 				D99B151426DCBB9700505067 /* CodeARCViewController.swift */,
 				D99B151626DCD98C00505067 /* CodeEquatable&ComparableViewController.swift */,
 				D99E281C27103E2900C106E0 /* CodeUserDefaultsViewController.swift */,
+				D973BBC827D7393700740506 /* CodeMeatdataViewController.swift */,
+				D9B9D6C4286AD0F100B7CE6E /* CodeKVOViewController.swift */,
+				D9B9D6C6286B058000B7CE6E /* CodeGCDViewController.swift */,
+				D90B1F52286E893E001F6EAE /* CodeFunctionalProgrammingViewController.swift */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -1693,6 +1752,9 @@
 			children = (
 				D99B151926DCE53200505067 /* ModuleVerificationCodeViewController.swift */,
 				D9E8DB7526E8B3810045858B /* ModuleMutableTableViewController.swift */,
+				D9FEAC3727E4657A005F5AD4 /* ModuleLabelWithOpenViewController.swift */,
+				D90C742127EAFBAF005AC7A6 /* ModuleFloatViewViewController.swift */,
+				D97E8F6F28406FA800070103 /* ModuleWKWebViewViewController.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1702,6 +1764,9 @@
 			children = (
 				D9E8DB7726E8B6250045858B /* MutableTableView */,
 				D9B2A4CB26E05A8E00380F38 /* VerificationCodeView.swift */,
+				D9FEAC3927E4659B005F5AD4 /* CustomLabelWithOpen.swift */,
+				D90C741F27EAFB14005AC7A6 /* FloatView.swift */,
+				D99C95EF27ED5F12002D4D32 /* CircleMoveView.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1906,6 +1971,7 @@
 				D9676F6A26C4FA9500345890 /* AuthManager.swift in Sources */,
 				D9676F8226C4FA9500345890 /* CGFloatExtensions.swift in Sources */,
 				D9676F9E26C4FA9500345890 /* UIColorExtensions.swift in Sources */,
+				D9FEC0C527425DAA00867CFA /* Extensions.swift in Sources */,
 				D9676F8526C4FA9500345890 /* UITextFieldExtensions.swift in Sources */,
 				D9676F2A26C4FA9500345890 /* DatabaseManager.swift in Sources */,
 				D9676FC026C4FA9500345890 /* ScanViewController.swift in Sources */,
@@ -1917,8 +1983,11 @@
 				D9C6AFC126CDFBAA002389E5 /* PageContentView.swift in Sources */,
 				D9676F7426C4FA9500345890 /* AddressPicker.swift in Sources */,
 				D9676F8B26C4FA9500345890 /* URLExtensions.swift in Sources */,
+				D9FEC0BF2742575800867CFA /* EssayFloatingPanelViewController.swift in Sources */,
 				D97CF6712702EADE0006D1A4 /* AnimationForPresentListEntity.swift in Sources */,
 				D9676F1B26C4FA9500345890 /* Constant.swift in Sources */,
+				D9FEC0C327425AA900867CFA /* InspectorViewController.swift in Sources */,
+				D9FB5A5F281696F40049600E /* EssayExpressViewController.swift in Sources */,
 				D9676F6126C4FA9500345890 /* ZFIJKPlayerManager.m in Sources */,
 				D97CF66E2702E41F0006D1A4 /* AnimationForPresentListCell.swift in Sources */,
 				D9C6AFC226CDFBAA002389E5 /* PageBadgeView.swift in Sources */,
@@ -1936,11 +2005,13 @@
 				D9FEDCC826D5DB0D00D8C626 /* CodeSwitchViewController.swift in Sources */,
 				D9C1484C27116A13003C868B /* DesignModeChainOfResponsibilityPatternViewController.swift in Sources */,
 				D9C6AFC326CDFBAA002389E5 /* PageTitleView.swift in Sources */,
+				D99C95F027ED5F12002D4D32 /* CircleMoveView.swift in Sources */,
 				D9676F2226C4FA9500345890 /* AppConfig.swift in Sources */,
 				D905659526D7747F00933E57 /* CodeBlockViewController.swift in Sources */,
 				D9676F2726C4FA9500345890 /* DataSourceObject.swift in Sources */,
 				D9676F8726C4FA9500345890 /* NotificationExtensions.swift in Sources */,
 				D9676F7826C4FA9500345890 /* PhotoAssetManager.swift in Sources */,
+				D9FEAC3827E4657A005F5AD4 /* ModuleLabelWithOpenViewController.swift in Sources */,
 				D9676F4B26C4FA9500345890 /* NetworkExceptionView.swift in Sources */,
 				D9676FC426C4FA9500345890 /* UserDetailsEntity.swift in Sources */,
 				D9676F6526C4FA9500345890 /* StatisticsManager.swift in Sources */,
@@ -1948,7 +2019,9 @@
 				D9676FB326C4FA9500345890 /* LiveViewController.swift in Sources */,
 				D95EF5D327181742004D22E8 /* HKRouterConfig.swift in Sources */,
 				D9676F2C26C4FA9500345890 /* DefaultResponse.swift in Sources */,
+				D97E8F7028406FA800070103 /* ModuleWKWebViewViewController.swift in Sources */,
 				D9676FBF26C4FA9500345890 /* IntegralMallTabBarItemContentView.swift in Sources */,
+				D973BBC927D7393700740506 /* CodeMeatdataViewController.swift in Sources */,
 				D942E3E22722B26F0066EC97 /* EssayCardListSectionHeaderView.swift in Sources */,
 				D9676F7926C4FA9500345890 /* CookieManager.swift in Sources */,
 				D9676F8A26C4FA9500345890 /* StringExtensions.swift in Sources */,
@@ -1974,6 +2047,7 @@
 				D9C6AFC026CDFBAA002389E5 /* PageHelper.swift in Sources */,
 				D9676FA826C4FA9500345890 /* UserAPI.swift in Sources */,
 				D95EF5D227181741004D22E8 /* HKRouterMap.swift in Sources */,
+				D90B1F53286E893E001F6EAE /* CodeFunctionalProgrammingViewController.swift in Sources */,
 				D9676F2D26C4FA9500345890 /* RequestParameterManager.swift in Sources */,
 				D9676F1F26C4FA9500345890 /* UserState.swift in Sources */,
 				D9676FC326C4FA9500345890 /* LoginViewController.swift in Sources */,
@@ -2012,6 +2086,8 @@
 				D99B151526DCBB9700505067 /* CodeARCViewController.swift in Sources */,
 				D9676F7626C4FA9500345890 /* AddressAPI.swift in Sources */,
 				D9676F4626C4FA9500345890 /* PullToRefreshExtensions.swift in Sources */,
+				D9B9D6C7286B058000B7CE6E /* CodeGCDViewController.swift in Sources */,
+				D9FEC0C1274258C800867CFA /* DebugTableViewController.swift in Sources */,
 				D9B2A4D626E0B1F700380F38 /* VideoMiddleCoverView.swift in Sources */,
 				D9676FA726C4FA9500345890 /* UserViewController.swift in Sources */,
 				D9676F6B26C4FA9500345890 /* AppleAuthManager.swift in Sources */,
@@ -2031,6 +2107,7 @@
 				D9676F9326C4FA9500345890 /* UIWindowExtensions.swift in Sources */,
 				D9676F8C26C4FA9500345890 /* UIViewControllerExtensions.swift in Sources */,
 				D97CF6632702A7510006D1A4 /* CollectionViewProtocol.swift in Sources */,
+				D90C742027EAFB14005AC7A6 /* FloatView.swift in Sources */,
 				D9676F2326C4FA9500345890 /* AppDelegate+rootWindow.swift in Sources */,
 				D95C99AB26D3A15C006828B5 /* SearchManager.swift in Sources */,
 				D9676F1D26C4FA9500345890 /* NotificationConfig.swift in Sources */,
@@ -2062,6 +2139,7 @@
 				D9C668FE2704495F00C75CB4 /* SingleFooterView.swift in Sources */,
 				D9C6AFC426CDFBAA002389E5 /* PageStyle.swift in Sources */,
 				D905659726D7882100933E57 /* CodeEnumViewController.swift in Sources */,
+				D9DEFEAE2733A936002A1C9E /* BannerPagerCell.swift in Sources */,
 				D9676F4526C4FA9500345890 /* RefreshFooterAnimator.swift in Sources */,
 				D9676F8026C4FA9500345890 /* ListReloadable.swift in Sources */,
 				D9676F7C26C4FA9500345890 /* WechatOpenManager.swift in Sources */,
@@ -2072,6 +2150,7 @@
 				D9676F8F26C4FA9500345890 /* UIViewExtensions.swift in Sources */,
 				D9993C7026D4E37B00773735 /* SubViewCell.swift in Sources */,
 				D9676F4326C4FA9500345890 /* WaterfallMutiSectionFlowLayout.swift in Sources */,
+				D9FEAC3A27E4659B005F5AD4 /* CustomLabelWithOpen.swift in Sources */,
 				D9676F6826C4FA9500345890 /* ImageManager.swift in Sources */,
 				D9AC759426CA08C800B3C121 /* HomeCustomNavigationBar.swift in Sources */,
 				D9676F7026C4FA9500345890 /* UIView+Gray.m in Sources */,
@@ -2103,6 +2182,7 @@
 				D9676F2F26C4FA9500345890 /* MutableTarget.swift in Sources */,
 				D9676FB426C4FA9500345890 /* FindViewController.swift in Sources */,
 				D9676F9C26C4FA9500345890 /* UIFontExtensions.swift in Sources */,
+				D90C742227EAFBAF005AC7A6 /* ModuleFloatViewViewController.swift in Sources */,
 				D9676F4C26C4FA9500345890 /* LoadingView.swift in Sources */,
 				D9676FCC26C4FF2F00345890 /* UserHeaderView.swift in Sources */,
 				D9676F5426C4FA9500345890 /* UIAlertController+GSAlert.swift in Sources */,
@@ -2113,9 +2193,12 @@
 				D9C6AFC626CDFBAA002389E5 /* PageView.swift in Sources */,
 				D92910D227030F9C006EC84D /* BannerEntity.swift in Sources */,
 				D9676F8926C4FA9500345890 /* IDCardExtension.swift in Sources */,
+				D95A297128261F5100563D41 /* AnimationSideSlipViewController.swift in Sources */,
 				D9676F4426C4FA9500345890 /* RefreshHeaderAnimator.swift in Sources */,
 				D9676FA326C4FA9500345890 /* CategoryManager.swift in Sources */,
+				D9B9D6C5286AD0F100B7CE6E /* CodeKVOViewController.swift in Sources */,
 				D9B2A4D826E0B20E00380F38 /* VideoBottomToolsView.swift in Sources */,
+				D950D30227280A29001A68AD /* EssayBezierViewController.swift in Sources */,
 				D9676F9426C4FA9500345890 /* DateExtensions.swift in Sources */,
 				D9676F3526C4FA9500345890 /* BaseNavigationController.swift in Sources */,
 				D99B151726DCD98C00505067 /* CodeEquatable&ComparableViewController.swift in Sources */,
@@ -2128,6 +2211,7 @@
 				D97CF6652702A7510006D1A4 /* CollectionCellViewModel.swift in Sources */,
 				D9676F9226C4FA9500345890 /* IntExtensions.swift in Sources */,
 				D9FEDCCE26D6479100D8C626 /* CodeOptionalViewController.swift in Sources */,
+				D984CE852728DE1A00161738 /* BezierView.swift in Sources */,
 				D9676FB826C4FA9500345890 /* PersonalTabBarItemContentView.swift in Sources */,
 				D92910CB27030C0F006EC84D /* BannerCell.swift in Sources */,
 				D9676F5E26C4FA9500345890 /* WMAddress.swift in Sources */,

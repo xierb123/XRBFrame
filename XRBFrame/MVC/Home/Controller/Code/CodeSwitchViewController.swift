@@ -19,6 +19,7 @@ class CodeSwitchViewController: BaseViewController {
         showSwitch4()
         showSwitch5()
         showSwitch6()
+        ZoomImage()
     }
     
     /// 普通的Switch语句
@@ -127,3 +128,17 @@ class CodeSwitchViewController: BaseViewController {
         }
     }
 }
+
+extension CodeSwitchViewController {
+    
+    func ZoomImage() {
+        let image = UIImage(named: "bg_dengluye")
+        if let data = image?.compressImageMid(maxLength: 1024*100) {
+            printLog(data)
+            return
+        }
+        printLog("压缩失败")
+    }
+}
+
+

@@ -21,3 +21,10 @@ extension Array {
         (self[a], self[b]) = (self[b], self[a])
     }
 }
+
+extension Collection {
+    public subscript (safe index: Self.Index) -> Iterator.Element? {
+        (startIndex ..< endIndex).contains(index) ? self[index] : nil
+    }
+}
+

@@ -39,5 +39,7 @@ target 'XRBFrame' do
     pod 'DanmakuKit', '~> 1.2.0'
     pod 'FSPagerView'
     pod 'URLNavigator'
+    pod 'FloatingPanel'
+    pod 'SwipeCellKit'
     pod 'XRBModule/Module'
 end

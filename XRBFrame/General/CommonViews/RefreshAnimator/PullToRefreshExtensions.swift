@@ -115,8 +115,8 @@ extension UIScrollView {
     ///   - isNoMore: Is there no more.
     func fixLoadMore(_ isNoMore: Bool) {
         if isNoMore {
-            let isShow = contentSize.height > height
-            noticeNoMoreData(isShowNoMore: isShow)
+            //let isShow = contentSize.height > height
+            noticeNoMoreData(isShowNoMore: true)
         } else {
             resetNoMoreData()
         }

@@ -48,6 +48,7 @@ class MainViewController: ESTabBarController {
         tabBarSettings()
         setViewControllers()
         defaultSettings()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

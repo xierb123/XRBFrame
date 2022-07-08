@@ -26,6 +26,16 @@ extension String {
         }
         return hash.map { String(format: "%02x", $0) }.joined()
    }
+    
+    func substring(from: Int, to: Int) -> String? {
+        if from < 0 || to > count || from > to {
+            return nil
+        }
+        
+        let startIndex = index(self.startIndex, offsetBy: from)
+        let endIndex = index(self.startIndex, offsetBy: to)
+        return String(self[startIndex..<endIndex])
+    }
 }
 
 // MARK: - Methods
@@ -361,3 +371,250 @@ extension Optional where Wrapped == String{
         return self?.isBlank ?? true
     }
 }
+
+extension String{
+    
+    static func format(decimal:Float, _ maximumDigits:Int = 1, _ minimumDigits:Int = 1) -> String? {
+        let number = NSNumber(value: decimal)
+        let numberFormatter = NumberFormatter()
+        numberFormatter.maximumFractionDigits = maximumDigits //设置小数点后最多2位
+        numberFormatter.minimumFractionDigits = minimumDigits //设置小数点后最少2位（不足补0）
+        return numberFormatter.string(from: number)
+    }
+    
+    func setOmitted(with maxLength: Int) -> String {
+        return self.length > maxLength ? String(self.prefix(maxLength))+"..." : self
+    }
+    
+    func urlScheme(scheme:String) -> URL? {
+        if let url = URL.init(string: self) {
+            var components = URLComponents.init(url: url, resolvingAgainstBaseURL: false)
+            components?.scheme = scheme
+            return components?.url
+        }
+        return nil
+    }
+    
+    //根据正则表达式改变文字颜色
+    func changeTextChange(regex: String, text: String, color: UIColor,font:CGFloat) -> NSMutableAttributedString {
+        let attributeString = NSMutableAttributedString(string: text)
+
+        do {
+            let regexExpression = try NSRegularExpression(pattern: regex, options: NSRegularExpression.Options())
+            let result = regexExpression.matches(in: text, options: NSRegularExpression.MatchingOptions(), range: NSMakeRange(0, text.count))
+            for item in result {
+//                attributeString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: item.range)
+                attributeString.addAttributes([NSAttributedString.Key.foregroundColor:color,NSAttributedString.Key.font:UIFont.systemFont(ofSize: font)], range: item.range)
+            }
+        } catch {
+            print("Failed with error: \(error)")
+        }
+
+        return attributeString
+    }
+    
+    func isPhoneNumber() -> Bool {
+//        let mobileRegex = "^((13[0-9])|(15[^4,\\D])|(18[0,0-9])|(19[0,0-9])|(17[0,0-9]))\\d{8}$"
+        let mobileRegex = "^((13[0-9])|(14[0-9])|(15[^4,\\D])|(16[0-9])|(17[0-9])|(18[0,0-9])|(19[0,0-9]))\\d{8}$"
+        let mobileTest:NSPredicate = NSPredicate(format: "SELF MATCHES %@", mobileRegex)
+        return mobileTest.evaluate(with: self)
+    }
+    
+    func changeRangeText(range:NSRange, text: String, color: UIColor,font:CGFloat) -> NSMutableAttributedString{
+        let attributeString = NSMutableAttributedString(string: text)
+            
+        // 3. 在生成的 NSMutableAttributedString 对象中修改前两位的颜色
+        attributeString.setAttributes(
+            [NSAttributedString.Key.foregroundColor : color,NSAttributedString.Key.font:UIFont.systemFont(ofSize: font)],
+            range: range
+        )
+
+        return attributeString
+    }
+    
+    func changeRangeBoldText(range:NSRange, text: String, color: UIColor,font:CGFloat) -> NSMutableAttributedString{
+        let attributeString = NSMutableAttributedString(string: text)
+            
+        // 3. 在生成的 NSMutableAttributedString 对象中修改前两位的颜色
+        attributeString.setAttributes(
+            [NSAttributedString.Key.foregroundColor : color,NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: font)],
+            range: range
+        )
+
+        return attributeString
+    }
+    
+    func nsRange(from range: Range<String.Index>) -> NSRange? {
+        
+        let utf16view = self.utf16
+        
+        if let from = range.lowerBound.samePosition(in: utf16view), let to = range.upperBound.samePosition(in: utf16view) {
+            
+            return NSMakeRange(utf16view.distance(from: utf16view.startIndex, to: from), utf16view.distance(from: from, to: to))
+            
+        }
+        
+        return nil
+    }
+    
+    private func getNormalStrSize(str: String? = nil, attriStr: NSMutableAttributedString? = nil, font: CGFloat, w: CGFloat, h: CGFloat) -> CGSize {
+        if str != nil {
+            let strSize = (str! as NSString).boundingRect(with: CGSize(width: w, height: h), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: font)], context: nil).size
+            return strSize
+        }
+        
+        if attriStr != nil {
+            let strSize = attriStr!.boundingRect(with: CGSize(width: w, height: h), options: .usesLineFragmentOrigin, context: nil).size
+            return strSize
+        }
+        
+        return CGSize.zero
+    }
+    
+    private func getNormalStrSize(str: String? = nil, attriStr: NSMutableAttributedString? = nil, font: UIFont, w: CGFloat, h: CGFloat) -> CGSize {
+        if str != nil {
+            let strSize = (str! as NSString).boundingRect(with: CGSize(width: w, height: h), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil).size
+            return strSize
+        }
+        
+        if attriStr != nil {
+            let strSize = attriStr!.boundingRect(with: CGSize(width: w, height: h), options: .usesLineFragmentOrigin, context: nil).size
+            return strSize
+        }
+        
+        return CGSize.zero
+    }
+    
+    /**获取字符串高度H*/
+    func getFontNormalStrH(str: String, strFont: UIFont, w: CGFloat) -> CGFloat {
+        return getNormalStrSize(str: str, font: strFont, w: w, h: CGFloat.greatestFiniteMagnitude).height
+    }
+    
+    /**获取字符串高度H*/
+    func getNormalStrH(str: String, strFont: CGFloat, w: CGFloat) -> CGFloat {
+        return getNormalStrSize(str: str, font: strFont, w: w, h: CGFloat.greatestFiniteMagnitude).height
+    }
+    
+    /**获取字符串宽度W*/
+    func getNormalStrW(str: String, strFont: CGFloat, h: CGFloat) -> CGFloat {
+        return getNormalStrSize(str: str, font: strFont, w: CGFloat.greatestFiniteMagnitude, h: h).width
+    }
+    
+    /**获取富文本字符串高度H*/
+    func getAttributedStrH(attriStr: NSMutableAttributedString, strFont: CGFloat, w: CGFloat) -> CGFloat {
+        return getNormalStrSize(attriStr: attriStr, font: strFont, w: w, h: CGFloat.greatestFiniteMagnitude).height
+    }
+    
+    /**获取富文本字符串宽度W*/
+    func getAttributedStrW(attriStr: NSMutableAttributedString, strFont: CGFloat, h: CGFloat) -> CGFloat {
+        return getNormalStrSize(attriStr: attriStr, font: strFont, w: CGFloat.greatestFiniteMagnitude, h: h).width
+    }
+    
+    func beforeStringAddImage(imageName:String,str:String,x:CGFloat,y:CGFloat,width:CGFloat,height:CGFloat) -> NSMutableAttributedString{
+        let img = UIImage(named: imageName)
+        let textAttach = NSTextAttachment.init()
+        textAttach.image = img
+        textAttach.bounds = CGRect(x: x, y: y, width: width, height: height)
+        let attributedStr = NSAttributedString(attachment: textAttach)
+        let attri = NSMutableAttributedString.init(string: str)
+        attri.insert(attributedStr, at: 0)
+        return attri
+    }
+    
+    /// 替换手机号中间四位
+    ///
+    /// - Returns: 替换后的值
+    func replacePhone() -> String {
+        if self == "" {
+            return ""
+        }
+        let start = self.index(self.startIndex, offsetBy: 3)
+        let end = self.index(self.startIndex, offsetBy: 7)
+        let range = Range(uncheckedBounds: (lower: start, upper: end))
+        return self.replacingCharacters(in: range, with: "****")
+    }
+    
+    func moneyToYuan() -> String{
+        let d = self.toDouble() ?? 0
+        let w = CGFloat(d)/100
+        var money = String(format: "%.2f", w)
+        
+        if money.hasSuffix("0") && !money.hasSuffix(".00") {
+            money = self.moneyToOneYuan()
+        }
+        money = money.hasSuffix(".00") ? self.moneyToIntYuan() : money
+        return money
+    }
+    
+    func moneyToIntYuan() -> String{
+        let d = self.toDouble() ?? 0
+        let w = CGFloat(d)/100
+        return String(format: "%.0f", w)
+    }
+    func moneyToOneYuan() -> String{
+        let d = self.toDouble() ?? 0
+        let w = CGFloat(d)/100
+        return String(format: "%.1f", w)
+    }
+    
+    //字符串转时间戳
+    func timeStrChangeTotimeInterval(timeStr: String?, dateFormat:String?) -> String {
+        if timeStr?.count ?? 0 <= 0 {
+            return ""
+        }
+        let format = DateFormatter.init()
+        format.dateStyle = .medium
+        format.timeStyle = .short
+        if dateFormat == nil {
+            format.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        }else{
+            format.dateFormat = dateFormat
+        }
+        let date = format.date(from: timeStr ?? "")
+        return String(date?.timeIntervalSince1970 ?? 0)
+    }
+    
+    //时间戳转成字符串
+    func timeIntervalChangeToTimeStr(timeInterval:TimeInterval, dateFormat:String?) -> String {
+        let date:NSDate = NSDate.init(timeIntervalSince1970: timeInterval)
+        let formatter = DateFormatter.init()
+        if dateFormat == nil {
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        }else{
+            formatter.dateFormat = dateFormat
+        }
+        return formatter.string(from: date as Date)
+    }
+}
+
+// 小驼峰命名与下划线命名切换
+extension String {
+    // - 小驼峰转化为下划线命名
+    func namedByUnderline() -> String {
+        var value = ""
+        let _ = self.map {
+            if ("A"..."Z").contains($0) {
+                value += "_\($0.lowercased())"
+                return
+            }
+            value += "\($0)"
+        }
+        return value
+    }
+    
+    // - 下划线转化为驼峰命名
+    func namedByHump() -> String {
+        var value = ""
+        var toUpper = false
+        let _ = self.map {
+            if $0 == "_" {
+                toUpper = true
+                return
+            }
+            value += toUpper ? "\($0.uppercased())" : "\($0)"
+            toUpper = false
+        }
+        return value
+    }
+}
+

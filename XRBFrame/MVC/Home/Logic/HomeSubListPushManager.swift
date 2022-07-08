@@ -32,15 +32,21 @@ struct HomeSubListPushManager {
             "协议扩展",
             "内存分配",
             "Equatable&Comparable",
-            "UserDefaults扩展"
-            
+            "UserDefaults扩展",
+            "元类型",
+            "KVO",
+            "线程 - GCD",
+            "函数式编程"
         ]
     }
     
     static var module: [String] {
         return [
             "自定义验证码输入框",
-            "多样化列表"
+            "多样化列表",
+            "可以展开收起的文本展示组件",
+            "悬浮窗口",
+            "WKWebView"
         ]
     }
     
@@ -52,7 +58,8 @@ struct HomeSubListPushManager {
     
     static var animation: [String] {
         return [
-            "Present转场动画"
+            "Present转场动画",
+            "列表侧滑展示"
         ]
     }
     
@@ -72,7 +79,10 @@ struct HomeSubListPushManager {
             "组件化",
             "爱宠collectionView列表绑定",
             "页面路由",
-            "卡片样式展示"
+            "卡片样式展示",
+            "贝塞尔曲线绘制多边形",
+            "FloatingPanel",
+            "快递问题"
         ]
     }
     
@@ -144,6 +154,14 @@ struct HomeSubListPushManager {
             vc = CodeEquatable_ComparableViewController()
         case(0, 19):
             vc = CodeUserDefaultsViewController()
+        case(0, 20):
+            vc = CodeMeatdataViewController()
+        case(0, 21):
+            vc = CodeKVOViewController()
+        case(0, 22):
+            vc = CodeGCDViewController()
+        case(0, 23):
+            vc = CodeFunctionalProgrammingViewController()
         default:
             return
         }
@@ -160,6 +178,12 @@ struct HomeSubListPushManager {
             vc = ModuleVerificationCodeViewController()
         case(0, 1):
             vc = ModuleMutableTableViewController()
+        case(0, 2):
+            vc = ModuleLabelWithOpenViewController()
+        case(0, 3):
+            vc = ModuleFloatViewViewController()
+        case(0, 4):
+            vc = ModuleWKWebViewViewController()
         default:
             return
         }
@@ -188,6 +212,8 @@ struct HomeSubListPushManager {
         switch (indexPath.section, indexPath.row) {
         case(0, 0):
             vc = AnimationForPresentViewController()
+        case(0, 1):
+            vc = AnimationSideSlipViewController()
         default:
             return
         }
@@ -232,6 +258,12 @@ struct HomeSubListPushManager {
             vc = EssayRouterViewController()
         case(0, 4):
             vc = EssayCardViewController()
+        case(0, 5):
+            vc = EssayBezierViewController()
+        case(0, 6):
+            vc = EssayFloatingPanelViewController()
+        case(0, 7):
+            vc = EssayExpressViewController()
         default:
             return
         }

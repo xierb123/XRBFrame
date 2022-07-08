@@ -34,6 +34,8 @@ class CodeEquatable_ComparableViewController: BaseViewController {
 
 }
 
+
+
 /// 符合Equatable协议
 struct  Point: Equatable {
     enum Error: Swift.Error{

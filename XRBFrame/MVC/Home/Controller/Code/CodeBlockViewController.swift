@@ -70,9 +70,10 @@ class CodeBlockViewController: BaseViewController {
     /// 高阶函数 - filter
     private func showBlock6() {
         var array = [1,2,3,4,5,6,7,8,9,10]
-        array = array.filter({ // 遍历数组内的元素,将符合条件的元素生成一个新的数组
+        let mmarray = array.filter({ // 遍历数组内的元素,将符合条件的元素生成一个新的数组
             return $0 > 5
         })
+        printLog(mmarray)
         printLog(array)
     }
     

@@ -15,15 +15,16 @@ class BannerCell: UICollectionViewCell {
     
     //MARK: - 全局变量
     private var models: [BannerEntity]!
+    private var currentCell: BannerPagerCell!
     
     //MARK: - 懒加载
     lazy var viewPager: FSPagerView = {
         let viewPager = FSPagerView()
         viewPager.dataSource = self
         viewPager.delegate = self
-        viewPager.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCell")
+        viewPager.register(BannerPagerCell.self, forCellWithReuseIdentifier: "BannerPagerCell")
         //设置自动翻页事件间隔，默认值为0（不自动翻页）
-        viewPager.automaticSlidingInterval = 3.0
+        viewPager.automaticSlidingInterval = 8.0
         //设置页面之间的间隔距离
         viewPager.interitemSpacing = 8.0
         //设置可以无限翻页，默认值为false，false时从尾部向前滚动到头部再继续循环滚动，true时可以无限滚动
@@ -109,16 +110,39 @@ extension BannerCell: FSPagerViewDelegate, FSPagerViewDataSource {
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "FSPagerViewCell", at: index)
-        let model = models[index]
-        cell.textLabel?.text = model.title
-        cell.imageView?.image = UIImage(named: model.imageName)
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: BannerPagerCell.identifier, at: index) as! BannerPagerCell
+        cell.show(index: index)
         return cell
     }
     
+    
     func pagerView(_ pagerView: FSPagerView, willDisplay cell: FSPagerViewCell, forItemAt index: Int) {
         pagerControl.currentPage = index
+        
+        printLog("即将出现 - \(index)")
+        if let cell = cell as? BannerPagerCell {
+            currentCell = cell
+        }
     }
+    
+    func pagerViewDidEndDecelerating(_ pagerView: FSPagerView) {
+        printLog("完全出现 - \(index)")
+        currentCell.startAnimation()
+    }
+    
+    func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
+        printLog("完全出现 - \(index)")
+        currentCell.startAnimation()
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, didEndDisplaying cell: FSPagerViewCell, forItemAt index: Int) {
+        printLog("完全移除 - \(index)")
+        if let cell = cell as? BannerPagerCell {
+            cell.endAnimation()
+        }
+    }
+    
+    
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         self.routerEvent(Comment(event: .clicked(index), type: BannerCell.identifier))

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ManProtocol {
+    func description()
+}
+
 class CodeEnumViewController: BaseViewController {
 
     override func viewDidLoad() {
@@ -17,6 +21,9 @@ class CodeEnumViewController: BaseViewController {
         showEnum2()
         showEnum3()
         showEnum4()
+        showEnum5()
+        showEnum6()
+        showEnum7()
     }
     
     /// 基本枚举
@@ -118,4 +125,78 @@ class CodeEnumViewController: BaseViewController {
         printLog(area.getArea())
         printLog(area.getPerimeter())
     }
+    
+    private func showEnum5() {
+        enum Enum5 {
+            case showAllTrue
+            case showAllFalse
+            case showPartsTrue
+            
+            mutating func getResult(model: EnumEntity) {
+                if model.a && model.b {
+                    self = .showAllFalse
+                } else if !model.a && !model.b {
+                    self = .showAllFalse
+                } else {
+                    self = .showPartsTrue
+                }
+            }
+        }
+        
+        let model = EnumEntity(a: true , b: false)
+        var result: Enum5 = .showAllTrue
+        result.getResult(model: model)
+        printLog(result)
+    }
+    
+    
+    
+    private func showEnum6() {
+       
+        func getInfo<M: ManProtocol>(obj: M) {
+            obj.description()
+        }
+        
+        let obj = Enum6.name(name: "法外狂徒 - 张三")
+        getInfo(obj: obj)
+    }
+    
+    private func showEnum7() {
+        enum TestEnum: String {
+            case one = "1287348176418453245243"
+            case two = "2"
+            case three = "3"
+        }
+        
+        var test = TestEnum.one
+        test = .two
+        test = .three
+        
+        printLog(MemoryLayout.size(ofValue: test))
+        printLog(MemoryLayout.stride(ofValue: test))
+        printLog(MemoryLayout.alignment(ofValue: test))
+    }
+}
+
+enum Enum6 {
+    case name(name: String)
+    case age(age: Int)
+    case sex(sex: Bool)
+}
+extension Enum6: ManProtocol {
+    func description() {
+        switch self {
+        case .age(let age):
+            printLog("获取到年龄 - \(age)")
+        case .name(let name):
+            printLog("获取到姓名 - \(name)")
+        case .sex(let sex):
+            printLog("获取到性别 -\(sex ? "男性" : "女性")")
+        }
+    }
+}
+
+struct EnumEntity {
+    var a: Bool = false
+    var b: Bool = false
 }

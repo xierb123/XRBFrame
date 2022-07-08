@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 typealias ReloadClosure = (NetworkExceptionStyle) -> Void
-typealias BackClosure = () -> Void
+public typealias BackClosure = () -> Void
 
 enum NetworkExceptionStyle {
     /// 网络异常

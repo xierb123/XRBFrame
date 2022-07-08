@@ -20,6 +20,8 @@ class CodeProtocolViewController: BaseViewController {
         
         printTable(with: table)
         
+        setPrefixProperty()
+        
     }
     
     /// 协议组合,函数传参,必须同时符合TabularDataSource 和 CustomStringConvertible两种协议
@@ -150,4 +152,96 @@ struct Person{
 /// 协议继承 - 符合DabularDataSource的类型,也必须实现CustomStringConvertible指定的方法
 protocol DabularDataSource: CustomStringConvertible{
     
+}
+
+//MARK: - 面向协议编程
+
+/// 1.前缀类型
+struct XRB<Base> {
+    var base: Base
+    init(_ base: Base) {
+        self.base = base
+    }
+}
+
+/// 2.利用协议扩展前缀属性
+protocol XRBDelegate {}
+extension XRBDelegate {
+    var xrb: XRB<Self> { XRB(self) }
+    static var xrb: XRB<Self>.Type {XRB<Self>.self}
+}
+
+
+/// 3.让数据类型遵守前缀属性
+struct People: XRBDelegate {
+    var name: String
+    var age: Int
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+/// 4.给前缀类型拓展对应数据类型的方法
+extension XRB where Base == People {
+    var getInfo: String {
+        "\(base.name)是一个\(base.age)的孩子"
+    }
+    
+    static var description: String {
+        "消灭人类暴政, 地球属于三体"
+    }
+}
+
+class AnimaleType: XRBDelegate {
+    var name: String?
+    var sex: String?
+    var hasTail: Bool?
+    
+    init(name: String, sex: String, hasTail: Bool) {
+        self.name = name
+        self.sex = sex
+        self.hasTail = hasTail
+    }
+}
+extension CodeProtocolViewController {
+    func setPrefixProperty() {
+        let str = "2387詹欧4785地方23"
+        print(str.xrb.numberCount)
+        
+        /// 5.使用前缀属性
+        let zhangsan = People(name: "张三", age: 23)
+        print(zhangsan.xrb.getInfo)
+        
+        let dog = AnimaleType(name: "安迪", sex: "公的", hasTail: true)
+        print(dog.xrb.description)
+        
+        
+        print(String.xrb.test)
+        print(People.xrb.description)
+    }
+}
+
+extension String: XRBDelegate {
+}
+
+extension XRB where Base == String {
+    var numberCount: Int {
+        var count = 0
+        for c in base where ("0"..."9").contains(c) {
+            count += 1
+        }
+        return count
+    }
+    
+    static var test: String {
+        "我就是个本本分分的字符串"
+    }
+}
+
+extension XRB where Base: AnimaleType {
+    var description: String {
+        "\(base.name!)是一个\(base.sex!), 它\(base.hasTail! ? "有" : "没有")尾巴"
+    }
 }

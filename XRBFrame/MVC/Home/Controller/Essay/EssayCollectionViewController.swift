@@ -137,6 +137,7 @@ extension EssayCollectionViewController {
             BannerEntity(title: "测试数据10", imageName: "ic_address_empty")
         ]
         
+        
         var viewModel = CollectionSectionViewModel(type: ManyItemCell.identifier)
         viewModel.minimumLineSpacing      = 10
         viewModel.minimumInteritemSpacing = 10

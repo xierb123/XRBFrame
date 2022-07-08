@@ -490,9 +490,10 @@ extension UIImage {
         if data.count < maxLength {
             return data
         }
+        printLog("原始尺寸: - \(data.count)")
         var max: CGFloat = 1
         var min: CGFloat = 0
-        for _ in 0..<6 {
+        for index in 0..<6 {
             compression = (max + min) / 2
             data = self.jpegData(compressionQuality: compression)!
             if CGFloat(data.count) < CGFloat(maxLength) * 0.9 {
@@ -502,9 +503,11 @@ extension UIImage {
             } else {
                 break
             }
+            printLog("第\(index)次压缩完尺寸为 -\(data.count),压缩比为 - \(compression)")
         }
         var _: UIImage = UIImage(data: data)!
         if data.count < maxLength {
+            printLog("压缩完成尺寸: - \(data.count)")
             return data
         }
         return nil
