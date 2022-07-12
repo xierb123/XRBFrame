@@ -61,7 +61,8 @@ class BaseViewController: UIViewController, RouterController {
     }
     
     deinit {
-        Toast.show( "deinit: \(type(of: self))页面被注销")
+        let title = self.title?.appending(" - ") ?? ""
+        Toast.show( "deinit: \(title) \(type(of: self))页面被注销")
     }
 
     override func viewDidLoad() {

@@ -7,84 +7,87 @@
 //  首页子页面跳转控制器
 
 import Foundation
+import UIKit
+
+enum Category{
+    case code
+    case module
+    case audioAndVideo
+    case animation
+    case designMode
+    case essay
+    
+    func getCategory() -> [String] {
+        switch self {
+        case .code :
+            return [
+                "Switch语句",
+                "循环",
+                "可空类型",
+                "数组",
+                "字典",
+                "集合",
+                "函数",
+                "闭包",
+                "枚举",
+                "结构体和类",
+                "属性",
+                "初始化",
+                "协议",
+                "错误处理",
+                "扩展",
+                "泛型",
+                "协议扩展",
+                "内存分配",
+                "Equatable&Comparable",
+                "UserDefaults扩展",
+                "元类型",
+                "KVO",
+                "线程 - GCD",
+                "函数式编程"
+            ]
+        case .module:
+            return [
+                "自定义验证码输入框",
+                "多样化列表",
+                "可以展开收起的文本展示组件",
+                "悬浮窗口",
+                "WKWebView"
+            ]
+        case .audioAndVideo:
+            return [
+                "视频播放器封装"
+            ]
+        case .animation:
+            return [
+                "Present转场动画",
+                "列表侧滑展示"
+            ]
+        case .designMode:
+            return [
+                "责任链模式",
+                "策略模式",
+                "命令模式",
+                "中介者模式",
+                "模式综合测试页面",
+            ]
+        case .essay:
+            return [
+                "华容道",
+                "组件化",
+                "爱宠collectionView列表绑定",
+                "页面路由",
+                "卡片样式展示",
+                "贝塞尔曲线绘制多边形",
+                "FloatingPanel",
+                "快递问题"
+            ]
+        }
+    }
+}
 
 struct HomeSubListPushManager {
     static weak var targetVC: BaseViewController?
-    
-    static var code: [String] {
-        return [
-            "Switch语句",
-            "循环",
-            "可空类型",
-            "数组",
-            "字典",
-            "集合",
-            "函数",
-            "闭包",
-            "枚举",
-            "结构体和类",
-            "属性",
-            "初始化",
-            "协议",
-            "错误处理",
-            "扩展",
-            "泛型",
-            "协议扩展",
-            "内存分配",
-            "Equatable&Comparable",
-            "UserDefaults扩展",
-            "元类型",
-            "KVO",
-            "线程 - GCD",
-            "函数式编程"
-        ]
-    }
-    
-    static var module: [String] {
-        return [
-            "自定义验证码输入框",
-            "多样化列表",
-            "可以展开收起的文本展示组件",
-            "悬浮窗口",
-            "WKWebView"
-        ]
-    }
-    
-    static var audioAndVideo: [String] {
-        return [
-            "视频播放器封装"
-        ]
-    }
-    
-    static var animation: [String] {
-        return [
-            "Present转场动画",
-            "列表侧滑展示"
-        ]
-    }
-    
-    static var designMode: [String] {
-        return [
-            "责任链模式",
-            "策略模式",
-            "命令模式",
-            "中介者模式",
-            "模式综合测试页面",
-        ]
-    }
-    
-    static var essay: [String] {
-        return [
-            "华容道",
-            "组件化",
-            "爱宠collectionView列表绑定",
-            "页面路由",
-            "卡片样式展示",
-            "贝塞尔曲线绘制多边形",
-            "FloatingPanel",
-            "快递问题"
-        ]
-    }
     
     /// 通过分类和点击的索引值,判断跳转事件
     static func pushVC(with target:BaseViewController?, type: Category, indexPath: IndexPath) {
@@ -165,11 +168,7 @@ struct HomeSubListPushManager {
         default:
             return
         }
-        vc.view.backgroundColor = .white
-        vc.title = code[indexPath.row]
-        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
-        targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
-        targetVC?.pushVC(vc)
+        Self.resetPushAction(vc, Category.code.getCategory()[indexPath.row])
     }
     static func pushModuleSubVC(with indexPath: IndexPath) {
         var vc: BaseViewController!
@@ -187,11 +186,7 @@ struct HomeSubListPushManager {
         default:
             return
         }
-        vc.view.backgroundColor = .white
-        vc.title = module[indexPath.row]
-        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
-        targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
-        targetVC?.pushVC(vc)
+        Self.resetPushAction(vc, Category.module.getCategory()[indexPath.row])
     }
     static func pushAudioAndVideoSubVC(with indexPath: IndexPath) {
         var vc: BaseViewController!
@@ -201,11 +196,7 @@ struct HomeSubListPushManager {
         default:
             return
         }
-        vc.view.backgroundColor = .white
-        vc.title = audioAndVideo[indexPath.row]
-        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
-        targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
-        targetVC?.pushVC(vc)
+        Self.resetPushAction(vc, Category.audioAndVideo.getCategory()[indexPath.row])
     }
     static func pushAnimationSubVC(with indexPath: IndexPath) {
         var vc: BaseViewController!
@@ -217,11 +208,7 @@ struct HomeSubListPushManager {
         default:
             return
         }
-        vc.view.backgroundColor = .white
-        vc.title = animation[indexPath.row]
-        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
-        targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
-        targetVC?.pushVC(vc)
+        Self.resetPushAction(vc, Category.animation.getCategory()[indexPath.row])
     }
     static func pushDesignModeSubVC(with indexPath: IndexPath) {
         var vc: BaseViewController!
@@ -239,11 +226,7 @@ struct HomeSubListPushManager {
         default:
             return
         }
-        vc.view.backgroundColor = .white
-        vc.title = designMode[indexPath.row]
-        vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
-        targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
-        targetVC?.pushVC(vc)
+        Self.resetPushAction(vc, Category.designMode.getCategory()[indexPath.row])
     }
     static func pushEssaySubVC(with indexPath: IndexPath) {
         var vc: BaseViewController!
@@ -267,8 +250,12 @@ struct HomeSubListPushManager {
         default:
             return
         }
+        Self.resetPushAction(vc, Category.essay.getCategory()[indexPath.row])
+    }
+    
+    static func resetPushAction(_ vc: BaseViewController, _ title: String) {
         vc.view.backgroundColor = .white
-        vc.title = essay[indexPath.row]
+        vc.title = title
         vc.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_custom_back"), style: .plain, target: vc, action: #selector(vc.clickBackBtn))
         targetVC?.navigationController?.navigationBar.tintColor = UIColor.darkGray
         targetVC?.pushVC(vc)

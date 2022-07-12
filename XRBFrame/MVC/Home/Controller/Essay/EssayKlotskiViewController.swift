@@ -128,20 +128,19 @@ class EssayKlotskiViewController: BaseViewController {
     
     private func moveIndex(_ currentIndex: Int, _ targetIndex: Int) {
         
-        printLog("选中的图片 - \(currentIndex), 目标图片 - \(targetIndex)")
+        
         
         let currentView = cacheViews[currentIndex] as? KlotskiImageView
         let targetView = cacheViews[targetIndex] as? KlotskiImageView
-        
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {return}
-            currentView?.origin = CGPoint(x: CGFloat((targetIndex) % 3) * 100 + self.marginLeft, y: CGFloat((targetIndex) / 3) * 100 + 250)
-            targetView?.origin = CGPoint(x: CGFloat((currentIndex) % 3) * 100 + self.marginLeft, y: CGFloat((currentIndex) / 3) * 100 + 250)
-        }
-        
+        printLog("选中的图片 - \(currentIndex) - \(currentView!.initIndex), 目标图片 - \(targetIndex) - \(targetView!.initIndex)")
         
         currentView?.moveIndex = targetIndex
         targetView?.moveIndex = currentIndex
         
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {return}
+            currentView!.origin = CGPoint(x: CGFloat((targetIndex) % 3) * 100 + self.marginLeft, y: CGFloat((targetIndex) / 3) * 100 + 250)
+            targetView! .origin = CGPoint(x: CGFloat((currentIndex) % 3) * 100 + self.marginLeft, y: CGFloat((currentIndex) / 3) * 100 + 250)
+        }
     }
 }

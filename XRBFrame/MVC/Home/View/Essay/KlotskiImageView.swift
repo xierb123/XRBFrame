@@ -10,6 +10,7 @@ import UIKit
 class KlotskiImageView: UIImageView {
     
     var moveHandle: ((_ currentIndex: Int, _ targetIndex: Int) -> ())? = nil
+    var label: UILabel!
     
     /// 边界方向
     enum GameBorder {
@@ -19,7 +20,7 @@ class KlotskiImageView: UIImageView {
         case bottom
         case right
     }
-    /// 边界方向
+    /// 移动方向
     enum SwippeDirection {
         case up
         case left
@@ -30,7 +31,7 @@ class KlotskiImageView: UIImageView {
     /// 初始化的序列值
     var initIndex: Int = 0 {
         didSet {
-            let label = UILabel()
+            label = UILabel()
             label.textAlignment = .center
             label.text = "\(initIndex)"
             label.textColor = .red
@@ -45,6 +46,7 @@ class KlotskiImageView: UIImageView {
     /// 当前的序列值
     var moveIndex: Int = 0 {
         didSet {
+            label.text = "\(initIndex) - \(moveIndex)"
             borderArray.removeAll()
             if [0, 1, 2].contains(moveIndex) {
                 borderArray.append(.top)

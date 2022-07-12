@@ -9,15 +9,6 @@
 import UIKit
 import EmptyDataSet_Swift
 
-enum Category {
-    case code
-    case module
-    case audioAndVideo
-    case animation
-    case designMode
-    case essay
-}
-
 class HomSubViewController: BaseViewController {
     
     //MARK: - 全局变量
@@ -28,22 +19,8 @@ class HomSubViewController: BaseViewController {
     
     //MARK: - 懒加载
     private lazy var dataList: [String]  = {
-        switch type {
-        case .code:
-            return HomeSubListPushManager.code
-        case .module:
-            return HomeSubListPushManager.module
-        case .audioAndVideo:
-            return HomeSubListPushManager.audioAndVideo
-        case .animation:
-            return HomeSubListPushManager.animation
-        case .designMode:
-            return HomeSubListPushManager.designMode
-        case .essay:
-            return HomeSubListPushManager.essay
-        case .none:
-            return []
-        }
+        guard let type = type else {return []}
+        return type.getCategory()
     }()
     
     //MARK: - init/deinit方法
