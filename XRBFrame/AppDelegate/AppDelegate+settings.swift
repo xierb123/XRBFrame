@@ -21,6 +21,8 @@ extension AppDelegate {
         setupIQKeyboardManager()
         // 启动Bugly
         Bugly.start(withAppId: BuglyConfig.appId)
+        
+        InitManager.startForJPush()
     }
     
     func setupRouter() {

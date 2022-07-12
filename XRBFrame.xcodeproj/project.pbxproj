@@ -233,6 +233,7 @@
 		D99D62732710446C00B765D6 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99D62722710446C00B765D6 /* UserDefaultsManager.swift */; };
 		D99E281B2710331D00C106E0 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E281A2710331D00C106E0 /* UserDefaultsExtension.swift */; };
 		D99E281D27103E2900C106E0 /* CodeUserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99E281C27103E2900C106E0 /* CodeUserDefaultsViewController.swift */; };
+		D9AAE92B287D1C3F00168515 /* InitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AAE92A287D1C3F00168515 /* InitManager.swift */; };
 		D9AC50EC270436FC00FBCBB2 /* SingleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC50EB270436FC00FBCBB2 /* SingleHeaderView.swift */; };
 		D9AC759426CA08C800B3C121 /* HomeCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC759326CA08C800B3C121 /* HomeCustomNavigationBar.swift */; };
 		D9AC759626CA099300B3C121 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AC759526CA099300B3C121 /* MessageView.swift */; };
@@ -520,6 +521,7 @@
 		D99D62722710446C00B765D6 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D99E281A2710331D00C106E0 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		D99E281C27103E2900C106E0 /* CodeUserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeUserDefaultsViewController.swift; sourceTree = "<group>"; };
+		D9AAE92A287D1C3F00168515 /* InitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitManager.swift; sourceTree = "<group>"; };
 		D9AC50EB270436FC00FBCBB2 /* SingleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHeaderView.swift; sourceTree = "<group>"; };
 		D9AC759326CA08C800B3C121 /* HomeCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomNavigationBar.swift; sourceTree = "<group>"; };
 		D9AC759526CA099300B3C121 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -1259,6 +1261,7 @@
 				D9993C7426D4EE6A00773735 /* HomeSubListPushManager.swift */,
 				D9B2A4D126E0A00800380F38 /* VideoPlayerManager.swift */,
 				D99D62722710446C00B765D6 /* UserDefaultsManager.swift */,
+				D9AAE92A287D1C3F00168515 /* InitManager.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -2200,6 +2203,7 @@
 				D9B2A4D826E0B20E00380F38 /* VideoBottomToolsView.swift in Sources */,
 				D950D30227280A29001A68AD /* EssayBezierViewController.swift in Sources */,
 				D9676F9426C4FA9500345890 /* DateExtensions.swift in Sources */,
+				D9AAE92B287D1C3F00168515 /* InitManager.swift in Sources */,
 				D9676F3526C4FA9500345890 /* BaseNavigationController.swift in Sources */,
 				D99B151726DCD98C00505067 /* CodeEquatable&ComparableViewController.swift in Sources */,
 				D92910C827030444006EC84D /* EssayCollectionViewController.swift in Sources */,
